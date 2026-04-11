@@ -52,13 +52,40 @@ def export_markdown(path: Path, payload: dict) -> None:
     write_text(path, render_markdown(payload))
 
 
+def render_timeline_markdown(payload: dict) -> str:
+    lines = [
+        f"日期:{payload['date']}",
+        "",
+    ]
+
+    for item in sorted(payload.get("news", []), key=lambda row: (row.get("time") or "99:99", row.get("title", ""))):
+        lines.append(f"时间:{item.get('time') or '00:00'}(24小时制)")
+        lines.append(f"主题:{item.get('title', '').strip()}")
+        lines.append("")
+        summary = item.get("summary", "").strip()
+        lines.append(f"内容:{summary}；" if summary else "内容:")
+        if item.get("category"):
+            lines.append(f"分类：{item['category']}；")
+        if item.get("source"):
+            lines.append(f"来源：{item['source']}；")
+        if item.get("url"):
+            lines.append(f"链接：{item['url']}")
+        lines.append("")
+
+    return "\n".join(lines).strip() + "\n"
+
+
+def export_timeline_markdown(path: Path, payload: dict) -> None:
+    write_text(path, render_timeline_markdown(payload))
+
+
 def export_csv(path: Path, payload: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
 
     with path.open("w", encoding="utf-8-sig", newline="") as file:
         writer = csv.DictWriter(
             file,
-            fieldnames=["category", "title", "summary", "importance", "source", "date", "url", "raw_sources"],
+            fieldnames=["category", "title", "summary", "importance", "source", "date", "time", "url", "raw_sources"],
         )
         writer.writeheader()
         for item in payload.get("news", []):

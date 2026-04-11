@@ -3,20 +3,34 @@ from __future__ import annotations
 import json
 import logging
 import re
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 from typing import Any
-from zoneinfo import ZoneInfo
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 from app.config import LOG_DIR
+
+
+FALLBACK_TIMEZONE_OFFSETS = {
+    "Asia/Kuala_Lumpur": timezone(timedelta(hours=8)),
+    "Asia/Singapore": timezone(timedelta(hours=8)),
+    "UTC": timezone.utc,
+}
+
+
+def resolve_timezone(timezone_name: str):
+    try:
+        return ZoneInfo(timezone_name)
+    except ZoneInfoNotFoundError:
+        return FALLBACK_TIMEZONE_OFFSETS.get(timezone_name, timezone.utc)
 
 
 def get_target_date(date_override: str | None, timezone_name: str) -> date:
     if date_override:
         return date.fromisoformat(date_override)
 
-    today = datetime.now(ZoneInfo(timezone_name)).date()
+    today = datetime.now(resolve_timezone(timezone_name)).date()
     return today - timedelta(days=1)
 
 
@@ -46,6 +60,38 @@ def to_iso_date(value: Any, fallback: date | None = None) -> str | None:
             return fallback.isoformat() if fallback else None
 
     return fallback.isoformat() if fallback else None
+
+
+def parse_datetime(value: Any) -> datetime | None:
+    if value is None:
+        return None
+
+    if isinstance(value, datetime):
+        return value
+
+    if isinstance(value, str):
+        raw = value.strip()
+        if not raw:
+            return None
+
+        try:
+            return datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        except ValueError:
+            pass
+
+        try:
+            return parsedate_to_datetime(raw)
+        except (TypeError, ValueError, IndexError):
+            return None
+
+    return None
+
+
+def to_display_time(value: Any) -> str:
+    parsed = parse_datetime(value)
+    if not parsed:
+        return "00:00"
+    return parsed.strftime("%H:%M")
 
 
 def safe_slug(value: str) -> str:

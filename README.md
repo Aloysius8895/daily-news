@@ -1,5 +1,6 @@
 # Daily News Automation
 
+launch: python -m app.main --skip-ai --dry-run
 一个按日自动生成“昨天的重要新闻摘要”的 Python 项目，包含：
 
 - 原始新闻抓取存档

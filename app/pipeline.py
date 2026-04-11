@@ -7,9 +7,9 @@ from pathlib import Path
 from typing import Callable
 
 from app.clean_news import build_local_fallback, deduplicate_items
-from app.config import CLEANED_DIR, GPT_RAW_DIR, RAW_DIR, Settings
+from app.config import ARCHIVE_DIR, CLEANED_DIR, GPT_RAW_DIR, RAW_DIR, Settings
 from app.deliver_news import send_email, send_to_notion, send_to_telegram
-from app.export_news import export_csv, export_json, export_markdown, render_markdown
+from app.export_news import export_csv, export_json, export_markdown, export_timeline_markdown, render_markdown
 from app.fetch_news import fetch_news
 from app.summarize_news import summarize_with_openai
 from app.utils import write_json, write_text
@@ -42,6 +42,7 @@ class PipelineContext:
     final_json_path: Path | None = None
     final_md_path: Path | None = None
     final_csv_path: Path | None = None
+    archive_md_path: Path | None = None
 
     def __post_init__(self) -> None:
         self.target_iso = self.target_date.isoformat()
@@ -148,6 +149,7 @@ def stage_generate_payload(context: PipelineContext) -> None:
         target_date=context.target_iso,
         max_final_items=context.settings.max_final_items,
         threshold=context.settings.similarity_threshold,
+        tech_focus_ratio=context.settings.tech_focus_ratio,
     )
     if context.gpt_raw_path is None:
         context.gpt_raw_text = "AI skipped. Local fallback used.\n"
@@ -160,16 +162,20 @@ def stage_export_outputs(context: PipelineContext) -> None:
     context.final_json_path = CLEANED_DIR / f"news_final_{context.target_iso}.json"
     context.final_md_path = CLEANED_DIR / f"news_final_{context.target_iso}.md"
     context.final_csv_path = CLEANED_DIR / f"news_final_{context.target_iso}.csv"
+    archive_month_dir = ARCHIVE_DIR / context.target_iso[:7]
+    context.archive_md_path = archive_month_dir / f"{context.target_iso}.md"
 
     export_json(context.final_json_path, context.payload)
     export_markdown(context.final_md_path, context.payload)
     export_csv(context.final_csv_path, context.payload)
+    export_timeline_markdown(context.archive_md_path, context.payload)
     context.markdown_content = render_markdown(context.payload)
     context.logger.info(
-        "Exported final outputs: %s, %s, %s",
+        "Exported final outputs: %s, %s, %s, %s",
         context.final_json_path,
         context.final_md_path,
         context.final_csv_path,
+        context.archive_md_path,
     )
 
 

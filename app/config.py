@@ -11,9 +11,25 @@ DATA_DIR = BASE_DIR / "data"
 RAW_DIR = DATA_DIR / "raw"
 GPT_RAW_DIR = DATA_DIR / "gpt_raw"
 CLEANED_DIR = DATA_DIR / "cleaned"
+ARCHIVE_DIR = DATA_DIR / "archive"
 LOG_DIR = DATA_DIR / "logs"
 
 DEFAULT_FEEDS = [
+    {
+        "name": "Reuters Technology",
+        "url": "https://feeds.reuters.com/reuters/technologyNews",
+        "category": "科技",
+    },
+    {
+        "name": "NYTimes Technology",
+        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+        "category": "科技",
+    },
+    {
+        "name": "BBC Technology",
+        "url": "http://feeds.bbci.co.uk/news/technology/rss.xml",
+        "category": "科技",
+    },
     {
         "name": "Reuters World",
         "url": "https://feeds.reuters.com/Reuters/worldNews",
@@ -25,19 +41,9 @@ DEFAULT_FEEDS = [
         "category": "商业",
     },
     {
-        "name": "Reuters Technology",
-        "url": "https://feeds.reuters.com/reuters/technologyNews",
-        "category": "科技",
-    },
-    {
         "name": "BBC World",
         "url": "http://feeds.bbci.co.uk/news/world/rss.xml",
         "category": "国际",
-    },
-    {
-        "name": "NYTimes Technology",
-        "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
-        "category": "科技",
     },
     {
         "name": "NYTimes Business",
@@ -59,7 +65,7 @@ def load_dotenv_if_present() -> None:
     except ImportError:
         return
 
-    load_dotenv(env_file)
+    load_dotenv(env_file, override=True)
 
 
 def _parse_json_env(name: str, default):
@@ -78,7 +84,7 @@ def _parse_feeds() -> list[dict]:
 
 
 def ensure_directories() -> None:
-    for path in (DATA_DIR, RAW_DIR, GPT_RAW_DIR, CLEANED_DIR, LOG_DIR):
+    for path in (DATA_DIR, RAW_DIR, GPT_RAW_DIR, CLEANED_DIR, ARCHIVE_DIR, LOG_DIR):
         path.mkdir(parents=True, exist_ok=True)
 
 
@@ -91,6 +97,7 @@ class Settings:
     max_items_for_model: int = 40
     max_final_items: int = 12
     similarity_threshold: float = 0.88
+    tech_focus_ratio: float = 0.67
     enable_ai_summary: bool = True
     enable_notion: bool = False
     enable_telegram: bool = False
@@ -125,6 +132,7 @@ def load_settings() -> Settings:
         max_items_for_model=int(os.getenv("MAX_ITEMS_FOR_MODEL", "40")),
         max_final_items=int(os.getenv("MAX_FINAL_ITEMS", "12")),
         similarity_threshold=float(os.getenv("SIMILARITY_THRESHOLD", "0.88")),
+        tech_focus_ratio=float(os.getenv("TECH_FOCUS_RATIO", "0.67")),
         enable_ai_summary=os.getenv("ENABLE_AI_SUMMARY", "true").lower() == "true",
         enable_notion=os.getenv("ENABLE_NOTION", "false").lower() == "true",
         enable_telegram=os.getenv("ENABLE_TELEGRAM", "false").lower() == "true",

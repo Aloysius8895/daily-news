@@ -1,0 +1,162 @@
+{
+  "date": "2026-04-11",
+  "overview": "2026-04-11 共整理 12 条重要新闻，其中科技与 AI 相关内容 11 条。当前为未经过模型重写的本地兜底结果。",
+  "news": [
+    {
+      "category": "金融",
+      "title": "Consumer Spending, Engine of the U.S. Economy, Is Under Strain",
+      "summary": "Higher fuel costs are raising food and travel prices, while a shaky stock market tamps down free spenders.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-11",
+      "time": "00:12",
+      "url": "https://www.nytimes.com/2026/04/10/business/economy/consumer-spending-economy.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "European Airports Warn of Jet Fuel Shortages if Strait of Hormuz Remains Shut",
+      "summary": "An association of airports told European Union officials that fuel shipments through the Strait of Hormuz had to restart within three weeks to avoid a “systemic” shortage.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-11",
+      "time": "00:23",
+      "url": "https://www.nytimes.com/2026/04/10/business/europe-airports-jet-fuel-shortage.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "Banks Are Warned About Anthropic’s New, Powerful A.I. Technology",
+      "summary": "In an unusual move, the Treasury secretary and the Federal Reserve chair gathered bank executives to caution about cyberthreats posed by artificial intelligence.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-11",
+      "time": "01:37",
+      "url": "https://www.nytimes.com/2026/04/10/business/anthropic-claude-mythos-preview-banks.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "An inappropriate joke nearly ended his career. Now he's back with more humour",
+      "summary": "A misfired joke nearly derailed Samay Raina’s comedy career. Now he’s back, reclaiming his voice.",
+      "importance": "",
+      "source": "BBC World",
+      "date": "2026-04-11",
+      "time": "01:45",
+      "url": "https://www.bbc.com/news/articles/czrekvml0p6o?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC World"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "Fallout of War Piles Economic Pain Onto Europe’s Political Stress",
+      "summary": "Europe is finding itself on the outs with Russia, China and the U.S., in what’s amounting to its very own “Mean Girls” moment.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-11",
+      "time": "04:00",
+      "url": "https://www.nytimes.com/2026/04/11/business/europe-economy-trump-trade-iran.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "‘Spring Clean’ Your Finances: How to Overhaul Your Spending and Savings to Stay on Track",
+      "summary": "When the world feels uncertain, spend the season of renewal taking charge of what you can control: your budget.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-11",
+      "time": "09:00",
+      "url": "https://www.nytimes.com/2026/04/11/business/finances-spring-cleaning-spending-saving-tips.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
+    },
+    {
+      "category": "商业",
+      "title": "Looking for a College Scholarship on Social Media Sites? Buyer, Beware.",
+      "summary": "Students say they trust their peers’ advice more than financial advisers’, a new survey found. But experts say students need to do their own research.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-11",
+      "time": "09:01",
+      "url": "https://www.nytimes.com/2026/04/11/your-money/college-scholarships-social-media.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "'You are my god', Japan's PM tells British rock band Deep Purple",
+      "summary": "Hard rock enthusiast Sanae Takaichi beamed as she met the rockers in her Tokyo office.",
+      "importance": "",
+      "source": "BBC World",
+      "date": "2026-04-11",
+      "time": "09:12",
+      "url": "https://www.bbc.com/news/articles/cre12n72nwno?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC World"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "Djibouti's president wins unprecedented sixth term with 97.8% of vote",
+      "summary": "Ismail Omar Guelleh, 78, has extended his already 27-year rule in a poll boycotted by the main opposition candidates.",
+      "importance": "",
+      "source": "BBC World",
+      "date": "2026-04-11",
+      "time": "09:42",
+      "url": "https://www.bbc.com/news/articles/cgj0wg423n6o?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC World"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "Why Employers May Be Wary of Adding Crypto or Private Equity to 401(k)s",
+      "summary": "A proposed federal rule aims to clear the way for retirement savings plans to include alternative assets. But it may not be enough to protect employers from lawsuits.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-11",
+      "time": "12:00",
+      "url": "https://www.nytimes.com/2026/04/11/business/dealbook/crypto-private-equity-401ks.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
+    },
+    {
+      "category": "国际",
+      "title": "Trump unveils giant gold-accented victory arch design for US capital",
+      "summary": "The new monument, if approved, would be taller than the US Capitol building and the Lincoln Memorial.",
+      "importance": "",
+      "source": "BBC World",
+      "date": "2026-04-11",
+      "time": "15:38",
+      "url": "https://www.bbc.com/news/articles/cwywre1e3kvo?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC World"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "Fuel tankers regain access to Irish oil refinery",
+      "summary": "Demonstrations due to high prices caused by the US-Israeli war against Iran are affecting traffic on several roads.",
+      "importance": "",
+      "source": "BBC World",
+      "date": "2026-04-11",
+      "time": "17:09",
+      "url": "https://www.bbc.com/news/articles/c0e7rpjqw5po?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC World"
+      ]
+    }
+  ]
+}

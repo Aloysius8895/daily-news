@@ -4,7 +4,7 @@ from collections.abc import Iterable
 from datetime import date
 from typing import Any
 
-from app.utils import normalize_title, to_iso_date
+from app.utils import normalize_title, parse_datetime, to_display_time, to_iso_date
 
 
 def _import_feedparser():
@@ -50,6 +50,13 @@ def fetch_news(feeds: Iterable[dict], target_date: date, max_items_per_source: i
         source_items = 0
 
         for entry in parsed.entries:
+            raw_published = (
+                getattr(entry, "published", None)
+                or getattr(entry, "updated", None)
+                or entry.get("published")
+                or entry.get("updated")
+            )
+            published_dt = parse_datetime(raw_published)
             published_iso = _entry_date(entry, target_date)
             if published_iso != target_iso:
                 continue
@@ -66,6 +73,8 @@ def fetch_news(feeds: Iterable[dict], target_date: date, max_items_per_source: i
                     "source": feed["name"],
                     "feed_category": feed.get("category", "其他"),
                     "published_at": published_iso,
+                    "published_datetime": published_dt.isoformat() if published_dt else "",
+                    "time": to_display_time(published_dt),
                     "url": link,
                     "normalized_title": normalize_title(title),
                 }
