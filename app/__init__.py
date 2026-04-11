@@ -1,0 +1,1 @@
+"""Daily news automation package."""
