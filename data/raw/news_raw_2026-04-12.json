@@ -1,0 +1,231 @@
+{
+  "target_date": "2026-04-12",
+  "fetched_at": "2026-04-13T13:54:20.631743Z",
+  "feeds": [
+    {
+      "name": "Reuters Technology",
+      "url": "https://feeds.reuters.com/reuters/technologyNews",
+      "category": "科技"
+    },
+    {
+      "name": "NYTimes Technology",
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+      "category": "科技"
+    },
+    {
+      "name": "BBC Technology",
+      "url": "http://feeds.bbci.co.uk/news/technology/rss.xml",
+      "category": "科技"
+    },
+    {
+      "name": "Reuters World",
+      "url": "https://feeds.reuters.com/Reuters/worldNews",
+      "category": "国际"
+    },
+    {
+      "name": "Reuters Business",
+      "url": "https://feeds.reuters.com/reuters/businessNews",
+      "category": "商业"
+    },
+    {
+      "name": "BBC World",
+      "url": "http://feeds.bbci.co.uk/news/world/rss.xml",
+      "category": "国际"
+    },
+    {
+      "name": "NYTimes Business",
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+      "category": "商业"
+    }
+  ],
+  "count": 17,
+  "items": [
+    {
+      "title": "The Escalating Global A.I. Arms Race",
+      "summary": "China, the U.S., Russia and others have ramped up their contest over artificial-intelligence-backed weapons and military systems. The buildup has been compared to the dawn of the nuclear weapons age.",
+      "source": "NYTimes Technology",
+      "feed_category": "科技",
+      "published_at": "2026-04-12",
+      "published_datetime": "2026-04-12T18:24:26+00:00",
+      "time": "18:24",
+      "url": "https://www.nytimes.com/2026/04/12/technology/china-russia-us-ai-weapons.html",
+      "normalized_title": "the escalating global ai arms race"
+    },
+    {
+      "title": "The Dutch village at risk of being demolished",
+      "summary": "Moerdijk has been earmarked for removal, to make way for a vast electricity substation.",
+      "source": "BBC World",
+      "feed_category": "国际",
+      "published_at": "2026-04-12",
+      "published_datetime": "2026-04-12T23:20:52+00:00",
+      "time": "23:20",
+      "url": "https://www.bbc.com/news/articles/cm2k8v027k0o?at_medium=RSS&at_campaign=rss",
+      "normalized_title": "the dutch village at risk of being demolished"
+    },
+    {
+      "title": "At least 30 feared dead in crush at Haitian tourist site",
+      "summary": "The incident occurred at a \"tourist event attended by many young people\", Haiti's prime minister says.",
+      "source": "BBC World",
+      "feed_category": "国际",
+      "published_at": "2026-04-12",
+      "published_datetime": "2026-04-12T07:22:28+00:00",
+      "time": "07:22",
+      "url": "https://www.bbc.com/news/articles/cwyj8d49wzxo?at_medium=RSS&at_campaign=rss",
+      "normalized_title": "at least 30 feared dead in crush at haitian tourist site"
+    },
+    {
+      "title": "Trump's threat raises risks and leaves predicaments unchanged",
+      "summary": "The conflict is now a test of wills - Iran’s capacity to absorb strikes versus Trump’s tolerance for the war's costs.",
+      "source": "BBC World",
+      "feed_category": "国际",
+      "published_at": "2026-04-12",
+      "published_datetime": "2026-04-12T22:57:22+00:00",
+      "time": "22:57",
+      "url": "https://www.bbc.com/news/articles/c8dl5mly2rzo?at_medium=RSS&at_campaign=rss",
+      "normalized_title": "trumps threat raises risks and leaves predicaments unchanged"
+    },
+    {
+      "title": "On patrol with Canadian forces securing the Arctic as global threats grow",
+      "summary": "Across 5,200 km of Canada's Arctic, its military spent two months on a mission to meet the challenges of a changing north.",
+      "source": "BBC World",
+      "feed_category": "国际",
+      "published_at": "2026-04-12",
+      "published_datetime": "2026-04-12T23:07:23+00:00",
+      "time": "23:07",
+      "url": "https://www.bbc.com/news/articles/cwyj8jjkl78o?at_medium=RSS&at_campaign=rss",
+      "normalized_title": "on patrol with canadian forces securing the arctic as global threats grow"
+    },
+    {
+      "title": "Political turmoil in Indian border state as nine million lose voting rights",
+      "summary": "Nine million voters have been dropped from rolls in West Bengal, raising concerns over exclusion and fairness.",
+      "source": "BBC World",
+      "feed_category": "国际",
+      "published_at": "2026-04-12",
+      "published_datetime": "2026-04-12T23:59:48+00:00",
+      "time": "23:59",
+      "url": "https://www.bbc.com/news/articles/cy51qg00dezo?at_medium=RSS&at_campaign=rss",
+      "normalized_title": "political turmoil in indian border state as nine million lose voting rights"
+    },
+    {
+      "title": "Why this disillusioned Trump voter spends hours searching Epstein files",
+      "summary": "Many who support the president have expressed frustration with how Trump's former attorney general Pam Bondi handled the Epstein files.",
+      "source": "BBC World",
+      "feed_category": "国际",
+      "published_at": "2026-04-12",
+      "published_datetime": "2026-04-12T00:30:44+00:00",
+      "time": "00:30",
+      "url": "https://www.bbc.com/news/articles/cx237vmr2lyo?at_medium=RSS&at_campaign=rss",
+      "normalized_title": "why this disillusioned trump voter spends hours searching epstein files"
+    },
+    {
+      "title": "'We need real peace': Ukrainians have little faith in Easter truce",
+      "summary": "Easter festivities are muted in Kharkiv as Ukrainians expect fighting to flare up again after a weekend truce.",
+      "source": "BBC World",
+      "feed_category": "国际",
+      "published_at": "2026-04-12",
+      "published_datetime": "2026-04-12T09:38:31+00:00",
+      "time": "09:38",
+      "url": "https://www.bbc.com/news/articles/cj0vn30574no?at_medium=RSS&at_campaign=rss",
+      "normalized_title": "we need real peace ukrainians have little faith in easter truce"
+    },
+    {
+      "title": "How Hungary's knife-edge election could impact the US and Russia",
+      "summary": "The BBC's Europe Editor Katya Adler reports from Prime Minister Victor Orbán's home town of Felscút.",
+      "source": "BBC World",
+      "feed_category": "国际",
+      "published_at": "2026-04-12",
+      "published_datetime": "2026-04-12T02:52:03+00:00",
+      "time": "02:52",
+      "url": "https://www.bbc.com/news/videos/cpqxy0d1g2yo?at_medium=RSS&at_campaign=rss",
+      "normalized_title": "how hungarys knifeedge election could impact the us and russia"
+    },
+    {
+      "title": "Christine Fréchette Is Chosen to Lead Coalition Avenir Québec",
+      "summary": "Far behind in the polls, Quebec’s governing party chose Christine Fréchette to succeed François Legault and to lead it in a vote this fall.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-12",
+      "published_datetime": "2026-04-12T21:58:05+00:00",
+      "time": "21:58",
+      "url": "https://www.nytimes.com/2026/04/12/world/americas/canada-quebec-premier-christine-frechette.html",
+      "normalized_title": "christine fréchette is chosen to lead coalition avenir québec"
+    },
+    {
+      "title": "The ‘Annoyance Economy’ Is More Than Just Annoying",
+      "summary": "A new estimate puts the cost of dealing with robocalls, hidden fees and customer service chatbots that can’t solve most problems at $165 billion.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-12",
+      "published_datetime": "2026-04-12T14:15:54+00:00",
+      "time": "14:15",
+      "url": "https://www.nytimes.com/2026/04/12/business/annoyance-economy-costs.html",
+      "normalized_title": "the annoyance economy is more than just annoying"
+    },
+    {
+      "title": "Peloton’s Latest Leader Thinks He Can Coach It Back to Health",
+      "summary": "The fitness company has fallen to a small fraction of its value at its pandemic peak, but Peter Stern says Peloton is headed in the right direction.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-12",
+      "published_datetime": "2026-04-12T09:00:41+00:00",
+      "time": "09:00",
+      "url": "https://www.nytimes.com/2026/04/12/business/peloton-peter-stern.html",
+      "normalized_title": "pelotons latest leader thinks he can coach it back to health"
+    },
+    {
+      "title": "The Escalating Global A.I. Arms Race",
+      "summary": "China, the U.S., Russia and others have ramped up their contest over artificial-intelligence-backed weapons and military systems. The buildup has been compared to the dawn of the nuclear weapons age.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-12",
+      "published_datetime": "2026-04-12T18:24:26+00:00",
+      "time": "18:24",
+      "url": "https://www.nytimes.com/2026/04/12/technology/china-russia-us-ai-weapons.html",
+      "normalized_title": "the escalating global ai arms race"
+    },
+    {
+      "title": "Southwest Airlines Imposes Further Limits on Portable Chargers on Flights",
+      "summary": "Starting on April 20, the airline will limit passengers to one lithium battery-powered portable charger per person.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-12",
+      "published_datetime": "2026-04-12T16:59:25+00:00",
+      "time": "16:59",
+      "url": "https://www.nytimes.com/2026/04/11/travel/southwest-airlines-portable-chargers.html",
+      "normalized_title": "southwest airlines imposes further limits on portable chargers on flights"
+    },
+    {
+      "title": "Someone Has to Be Happy. Why Not Lauren Sánchez Bezos?",
+      "summary": "As half of an unfathomably powerful couple, Mrs. Sánchez Bezos seems to have influenced the uber-rich to stop apologizing, and start enjoying themselves.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-12",
+      "published_datetime": "2026-04-12T19:20:24+00:00",
+      "time": "19:20",
+      "url": "https://www.nytimes.com/2026/04/11/business/lauren-sanchez-bezos-jeff-bezos.html",
+      "normalized_title": "someone has to be happy why not lauren sánchez bezos"
+    },
+    {
+      "title": "Overlooked No More: Margaret Gipsy Moth, Fearless CNN Camera Operator",
+      "summary": "She covered conflicts across the globe, joking after she was injured in Sarajevo that she would be returning to find her missing teeth.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-12",
+      "published_datetime": "2026-04-12T13:37:56+00:00",
+      "time": "13:37",
+      "url": "https://www.nytimes.com/2026/04/11/obituaries/margaret-gipsy-moth-overlooked.html",
+      "normalized_title": "overlooked no more margaret gipsy moth fearless cnn camera operator"
+    },
+    {
+      "title": "White House and Crypto Industry Fight Bank Lobby Over Stablecoin Income",
+      "summary": "The Trump administration backed a proposal for stablecoin issuers to offer yield to investors.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-12",
+      "published_datetime": "2026-04-12T02:57:56+00:00",
+      "time": "02:57",
+      "url": "https://www.nytimes.com/2026/04/09/business/white-house-crypto-stablecoins-interest.html",
+      "normalized_title": "white house and crypto industry fight bank lobby over stablecoin income"
+    }
+  ]
+}

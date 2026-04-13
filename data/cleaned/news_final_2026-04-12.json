@@ -1,0 +1,162 @@
+{
+  "date": "2026-04-12",
+  "overview": "2026-04-12 共整理 12 条重要新闻，其中科技与 AI 相关内容 6 条。当前为未经过模型重写的本地兜底结果。",
+  "news": [
+    {
+      "category": "科技",
+      "title": "At least 30 feared dead in crush at Haitian tourist site",
+      "summary": "The incident occurred at a \"tourist event attended by many young people\", Haiti's prime minister says.",
+      "importance": "",
+      "source": "BBC World",
+      "date": "2026-04-12",
+      "time": "07:22",
+      "url": "https://www.bbc.com/news/articles/cwyj8d49wzxo?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC World"
+      ]
+    },
+    {
+      "category": "商业",
+      "title": "Peloton’s Latest Leader Thinks He Can Coach It Back to Health",
+      "summary": "The fitness company has fallen to a small fraction of its value at its pandemic peak, but Peter Stern says Peloton is headed in the right direction.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-12",
+      "time": "09:00",
+      "url": "https://www.nytimes.com/2026/04/12/business/peloton-peter-stern.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "'We need real peace': Ukrainians have little faith in Easter truce",
+      "summary": "Easter festivities are muted in Kharkiv as Ukrainians expect fighting to flare up again after a weekend truce.",
+      "importance": "",
+      "source": "BBC World",
+      "date": "2026-04-12",
+      "time": "09:38",
+      "url": "https://www.bbc.com/news/articles/cj0vn30574no?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC World"
+      ]
+    },
+    {
+      "category": "商业",
+      "title": "Overlooked No More: Margaret Gipsy Moth, Fearless CNN Camera Operator",
+      "summary": "She covered conflicts across the globe, joking after she was injured in Sarajevo that she would be returning to find her missing teeth.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-12",
+      "time": "13:37",
+      "url": "https://www.nytimes.com/2026/04/11/obituaries/margaret-gipsy-moth-overlooked.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
+    },
+    {
+      "category": "商业",
+      "title": "The ‘Annoyance Economy’ Is More Than Just Annoying",
+      "summary": "A new estimate puts the cost of dealing with robocalls, hidden fees and customer service chatbots that can’t solve most problems at $165 billion.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-12",
+      "time": "14:15",
+      "url": "https://www.nytimes.com/2026/04/12/business/annoyance-economy-costs.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "Southwest Airlines Imposes Further Limits on Portable Chargers on Flights",
+      "summary": "Starting on April 20, the airline will limit passengers to one lithium battery-powered portable charger per person.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-12",
+      "time": "16:59",
+      "url": "https://www.nytimes.com/2026/04/11/travel/southwest-airlines-portable-chargers.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "The Escalating Global A.I. Arms Race",
+      "summary": "China, the U.S., Russia and others have ramped up their contest over artificial-intelligence-backed weapons and military systems. The buildup has been compared to the dawn of the nuclear weapons age.",
+      "importance": "",
+      "source": "NYTimes Technology",
+      "date": "2026-04-12",
+      "time": "18:24",
+      "url": "https://www.nytimes.com/2026/04/12/technology/china-russia-us-ai-weapons.html",
+      "raw_sources": [
+        "NYTimes Technology"
+      ]
+    },
+    {
+      "category": "商业",
+      "title": "Someone Has to Be Happy. Why Not Lauren Sánchez Bezos?",
+      "summary": "As half of an unfathomably powerful couple, Mrs. Sánchez Bezos seems to have influenced the uber-rich to stop apologizing, and start enjoying themselves.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-12",
+      "time": "19:20",
+      "url": "https://www.nytimes.com/2026/04/11/business/lauren-sanchez-bezos-jeff-bezos.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
+    },
+    {
+      "category": "商业",
+      "title": "Christine Fréchette Is Chosen to Lead Coalition Avenir Québec",
+      "summary": "Far behind in the polls, Quebec’s governing party chose Christine Fréchette to succeed François Legault and to lead it in a vote this fall.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-12",
+      "time": "21:58",
+      "url": "https://www.nytimes.com/2026/04/12/world/americas/canada-quebec-premier-christine-frechette.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "Trump's threat raises risks and leaves predicaments unchanged",
+      "summary": "The conflict is now a test of wills - Iran’s capacity to absorb strikes versus Trump’s tolerance for the war's costs.",
+      "importance": "",
+      "source": "BBC World",
+      "date": "2026-04-12",
+      "time": "22:57",
+      "url": "https://www.bbc.com/news/articles/c8dl5mly2rzo?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC World"
+      ]
+    },
+    {
+      "category": "国际",
+      "title": "On patrol with Canadian forces securing the Arctic as global threats grow",
+      "summary": "Across 5,200 km of Canada's Arctic, its military spent two months on a mission to meet the challenges of a changing north.",
+      "importance": "",
+      "source": "BBC World",
+      "date": "2026-04-12",
+      "time": "23:07",
+      "url": "https://www.bbc.com/news/articles/cwyj8jjkl78o?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC World"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "Political turmoil in Indian border state as nine million lose voting rights",
+      "summary": "Nine million voters have been dropped from rolls in West Bengal, raising concerns over exclusion and fairness.",
+      "importance": "",
+      "source": "BBC World",
+      "date": "2026-04-12",
+      "time": "23:59",
+      "url": "https://www.bbc.com/news/articles/cy51qg00dezo?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC World"
+      ]
+    }
+  ]
+}

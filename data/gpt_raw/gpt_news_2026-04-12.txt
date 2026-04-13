@@ -1,0 +1,1 @@
+AI skipped. Local fallback used.
