@@ -4,14 +4,23 @@
   "news": [
     {
       "category": "科技",
+      "title": "elon musk在tiktok上发布了一个账号",
+      "summary": "elon musk在tiktok上发布了一个账号，引发了广泛关注。该账号的内容与之前的tweet有所不同，可能表明 Musk 正在尝试推广他的新项目X。",
+      "importance": "入选原因：elon musk在tiktok上发布了一个账号，引发了广泛关注",
+      "source": "NYTimes Technology",
+      "date": "2026-04-13",
+      "time": "17:54",
+      "url": "https://www.nytimes.com/2026/04/12/technology/elon-musk-tiktok.html"
+    },
+    {
+      "category": "科技",
       "title": "roblox扩展了其年龄限制",
       "summary": "roblox扩展了其年龄限制，引发了广泛关注。该公司表示，这是为了确保用户的安全和福祉。",
       "importance": "入选原因：roblox扩展了其年龄限制",
       "source": "BBC Technology",
       "date": "2026-04-13",
       "time": "12:19",
-      "url": "https://www.bbc.com/news/articles/cj94y9r0p10o",
-      "raw_sources": []
+      "url": "https://www.bbc.com/news/articles/cj94y9r0p10o"
     },
     {
       "category": "科技",
@@ -21,19 +30,7 @@
       "source": "BBC Technology",
       "date": "2026-04-13",
       "time": "15:10",
-      "url": "https://www.bbc.com/news/articles/cx2dg5g1le7o",
-      "raw_sources": []
-    },
-    {
-      "category": "科技",
-      "title": "elon musk在tiktok上发布了一个账号",
-      "summary": "elon musk在tiktok上发布了一个账号，引发了广泛关注。该账号的内容与之前的tweet有所不同，可能表明 Musk 正在尝试推广他的新项目X。",
-      "importance": "入选原因：elon musk在tiktok上发布了一个账号，引发了广泛关注",
-      "source": "NYTimes Technology",
-      "date": "2026-04-13",
-      "time": "17:54",
-      "url": "https://www.nytimes.com/2026/04/12/technology/elon-musk-tiktok.html",
-      "raw_sources": []
+      "url": "https://www.bbc.com/news/articles/cx2dg5g1le7o"
     }
   ]
 }
