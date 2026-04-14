@@ -200,3 +200,4 @@ EMAIL_RECIPIENT=...
 - 如果 OpenAI 或 Ollama 不可用，脚本会退回本地去重后的兜底结果，链路不会中断。
 - 可以通过 `.env` 里的 `AI_PROVIDER` 或 CLI 参数 `--ai-provider` 在 `openai`、`ollama`、`none` 之间切换。
 - 对本地 Ollama，默认会限制送入模型的新闻条数、限制最大输出长度并使用更长超时；如果机器较慢，可以继续调大 `OLLAMA_TIMEOUT_SECONDS`，或把 `OLLAMA_MODEL` 换成 `llama3.2:1b`。
+- 如果你想把去重后的全部新闻都送进模型，可以把 `MAX_ITEMS_FOR_MODEL=0` 和 `OLLAMA_MAX_ITEMS_FOR_MODEL=0`。`0` 表示不截断，但本地 Ollama 会更慢。

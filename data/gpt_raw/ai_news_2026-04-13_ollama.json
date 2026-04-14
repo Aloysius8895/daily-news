@@ -1,36 +1,83 @@
 {
   "date": "2026-04-13",
-  "overview": "本日有多项重要新闻，包括elon musk在tiktok上发布了一个账号，roblox扩展了其年龄限制，gta-maker rockstar games被hack了两次等。同时，国际方面也有一些关注点，如利比亚与以色列的谈判和BBC在利比亚的工作情况等。",
+  "overview": "本日有多项重要新闻，包括美国对伊朗的海军封锁、中国在中东的战略扩张以及全球经济的波动。这些事件都可能对世界经济和政治产生重大影响。",
   "news": [
     {
-      "category": "科技",
-      "title": "elon musk在tiktok上发布了一个账号",
-      "summary": "elon musk在tiktok上发布了一个账号，引发了广泛关注。该账号的内容与之前的tweet有所不同，可能表明 Musk 正在尝试推广他的新项目X。",
-      "importance": "入选原因：elon musk在tiktok上发布了一个账号，引发了广泛关注",
-      "source": "NYTimes Technology",
+      "category": "国际",
+      "title": "美国对伊朗的海军封锁",
+      "summary": "美国总统特朗普宣布对伊朗进行海军封锁，这是他对伊朗政策的一项重要措施。该封锁可能会对伊朗的经济和政治产生重大影响。",
+      "importance": "",
+      "source": "BBC World",
       "date": "2026-04-13",
-      "time": "17:54",
-      "url": "https://www.nytimes.com/2026/04/12/technology/elon-musk-tiktok.html"
+      "time": "15:27",
+      "url": "https://www.bbc.com/news/articles/cj94y9r0p10o?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC World"
+      ]
     },
     {
       "category": "科技",
-      "title": "roblox扩展了其年龄限制",
-      "summary": "roblox扩展了其年龄限制，引发了广泛关注。该公司表示，这是为了确保用户的安全和福祉。",
-      "importance": "入选原因：roblox扩展了其年龄限制",
-      "source": "BBC Technology",
+      "title": "中国在中东的战略扩张",
+      "summary": "中国正在加强其在中东的 Presence，包括投资和合作。这些行动可能会对全球经济和政治产生重大影响。",
+      "importance": "",
+      "source": "NYTimes Business",
       "date": "2026-04-13",
-      "time": "12:19",
-      "url": "https://www.bbc.com/news/articles/cj94y9r0p10o"
+      "time": "14:38",
+      "url": "https://www.nytimes.com/2026/04/13/business/energy-environment/china-energy-battery-grid.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
     },
     {
-      "category": "科技",
-      "title": "gta-maker rockstar games被hack了两次",
-      "summary": "gta-maker rockstar games被hack了两次，引发了广泛关注。该公司表示，这是为了确保其用户的安全和福祉。",
-      "importance": "入选原因：gta-maker rockstar games被hack了两次",
-      "source": "BBC Technology",
+      "category": "国际",
+      "title": "全球经济的波动",
+      "summary": "全球经济正在经历波动，包括对伊朗和中东的影响。这些变化可能会对世界经济和政治产生重大影响。",
+      "importance": "",
+      "source": "BBC World",
       "date": "2026-04-13",
-      "time": "15:10",
-      "url": "https://www.bbc.com/news/articles/cx2dg5g1le7o"
+      "time": "16:07",
+      "url": "https://www.bbc.com/news/articles/c5yv6xr6me3o?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC World"
+      ]
+    },
+    {
+      "category": "商业",
+      "title": "美国对伊朗的海军封锁",
+      "summary": "美国总统特朗普宣布对伊朗进行海军封锁，这是他对伊朗政策的一项重要措施。该封锁可能会对伊朗的经济和政治产生重大影响。",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-13",
+      "time": "15:27",
+      "url": "https://www.nytimes.com/2026/04/13/business/mcdonalds-drinks-refreshers-dirty-soda.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
+    },
+    {
+      "category": "国际",
+      "title": "伊朗的经济和政治影响",
+      "summary": "美国对伊朗的海军封锁可能会对伊朗的经济和政治产生重大影响。该封锁可能会导致伊朗的经济衰退和政治不稳定。",
+      "importance": "",
+      "source": "BBC World",
+      "date": "2026-04-13",
+      "time": "21:09",
+      "url": "https://www.bbc.com/news/articles/c8ejg3wk81no?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC World"
+      ]
+    },
+    {
+      "category": "商业",
+      "title": "全球经济的波动",
+      "summary": "全球经济正在经历波动，包括对伊朗和中东的影响。这些变化可能会对世界经济和政治产生重大影响。",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-13",
+      "time": "19:53",
+      "url": "https://www.nytimes.com/2026/04/13/business/goldman-sachs-earnings.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
     }
-  ]
-}
+  ]}

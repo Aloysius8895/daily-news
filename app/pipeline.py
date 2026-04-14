@@ -13,7 +13,7 @@ from app.deliver_news import send_email, send_to_notion, send_to_telegram
 from app.export_news import export_csv, export_json, export_markdown, export_timeline_markdown, render_markdown
 from app.fetch_news import fetch_news
 from app.summarize_news import summarize_news
-from app.utils import write_json, write_text
+from app.utils import normalize_title, write_json, write_text
 
 
 StageFn = Callable[["PipelineContext"], None]
@@ -165,13 +165,25 @@ def stage_deduplicate(context: PipelineContext) -> None:
 
 def stage_generate_payload(context: PipelineContext) -> None:
     provider = context.ai_provider
+    local_payload = build_local_fallback(
+        items=context.deduped_raw_items,
+        target_date=context.target_iso,
+        max_final_items=context.settings.max_final_items,
+        threshold=context.settings.similarity_threshold,
+        tech_focus_ratio=context.settings.tech_focus_ratio,
+    )
+    context.logger.info(
+        "Prepared %s locally ranked final candidates before AI rewrite",
+        len(local_payload.get("news", [])),
+    )
     max_items_for_model = context.settings.max_items_for_model
 
     if provider == "ollama":
-        max_items_for_model = min(
-            context.settings.max_items_for_model,
-            context.settings.ollama_max_items_for_model,
-        )
+        ollama_limit = context.settings.ollama_max_items_for_model
+        if max_items_for_model <= 0 or ollama_limit <= 0:
+            max_items_for_model = 0
+        else:
+            max_items_for_model = min(max_items_for_model, ollama_limit)
 
     if context.use_ai:
         model_name = (
@@ -194,9 +206,14 @@ def stage_generate_payload(context: PipelineContext) -> None:
                 ollama_timeout_seconds=context.settings.ollama_timeout_seconds,
                 ollama_num_predict=context.settings.ollama_num_predict,
                 categories=context.settings.categories,
-                raw_items=context.deduped_raw_items,
+                raw_items=local_payload.get("news", []),
                 target_date=context.target_iso,
                 max_items_for_model=max_items_for_model,
+                max_final_items=context.settings.max_final_items,
+            )
+            payload = backfill_payload_news(
+                payload=payload,
+                local_payload=local_payload,
                 max_final_items=context.settings.max_final_items,
             )
             context.gpt_raw_text = raw_text
@@ -215,18 +232,45 @@ def stage_generate_payload(context: PipelineContext) -> None:
             context.gpt_raw_path = GPT_RAW_DIR / f"ai_news_{context.target_iso}_{provider}_error.txt"
             write_text(context.gpt_raw_path, context.gpt_raw_text)
 
-    context.payload = build_local_fallback(
-        items=context.deduped_raw_items,
-        target_date=context.target_iso,
-        max_final_items=context.settings.max_final_items,
-        threshold=context.settings.similarity_threshold,
-        tech_focus_ratio=context.settings.tech_focus_ratio,
-    )
+    context.payload = local_payload
     if context.gpt_raw_path is None:
         context.gpt_raw_text = f"AI skipped. {context.ai_skip_reason or 'Local fallback used.'}\n"
         context.gpt_raw_path = GPT_RAW_DIR / f"ai_news_{context.target_iso}_{provider}.txt"
         write_text(context.gpt_raw_path, context.gpt_raw_text)
     context.logger.info("Using local fallback payload")
+
+
+def backfill_payload_news(
+    *,
+    payload: dict,
+    local_payload: dict,
+    max_final_items: int,
+) -> dict:
+    current_items = payload.get("news", [])
+    current_items_by_key = {
+        ((item.get("url") or "").strip() or normalize_title(item.get("title", ""))): item
+        for item in current_items
+        if (item.get("url") or "").strip() or normalize_title(item.get("title", ""))
+    }
+
+    merged_items: list[dict] = []
+    for local_item in local_payload.get("news", [])[:max_final_items]:
+        key = (local_item.get("url") or "").strip() or normalize_title(local_item.get("title", ""))
+        ai_item = current_items_by_key.get(key, {})
+        merged_item = dict(local_item)
+
+        if ai_item.get("summary"):
+            merged_item["summary"] = ai_item["summary"]
+        if ai_item.get("importance"):
+            merged_item["importance"] = ai_item["importance"]
+
+        merged_items.append(merged_item)
+
+    payload["news"] = merged_items
+    payload["date"] = local_payload.get("date", payload.get("date", ""))
+    if not payload.get("overview"):
+        payload["overview"] = local_payload.get("overview", "")
+    return payload
 
 
 def stage_export_outputs(context: PipelineContext) -> None:

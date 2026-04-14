@@ -31,6 +31,26 @@ DEFAULT_FEEDS = [
         "category": "科技",
     },
     {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/feed/",
+        "category": "科技",
+    },
+    {
+        "name": "WIRED AI",
+        "url": "https://www.wired.com/feed/tag/ai/latest/rss",
+        "category": "科技",
+    },
+    {
+        "name": "WIRED Security",
+        "url": "https://www.wired.com/feed/category/security/latest/rss",
+        "category": "科技",
+    },
+    {
+        "name": "WIRED Top Stories",
+        "url": "https://www.wired.com/feed/rss",
+        "category": "科技",
+    },
+    {
         "name": "Reuters World",
         "url": "https://feeds.reuters.com/Reuters/worldNews",
         "category": "国际",
@@ -110,9 +130,9 @@ class Settings:
     target_timezone: str = "Asia/Kuala_Lumpur"
     max_feed_items_per_source: int = 30
     max_items_for_model: int = 40
-    max_final_items: int = 12
+    max_final_items: int = 20
     similarity_threshold: float = 0.88
-    tech_focus_ratio: float = 0.67
+    tech_focus_ratio: float = 0.75
     enable_ai_summary: bool = True
     enable_notion: bool = False
     enable_telegram: bool = False
@@ -151,9 +171,9 @@ def load_settings() -> Settings:
         target_timezone=os.getenv("TARGET_TIMEZONE", "Asia/Kuala_Lumpur"),
         max_feed_items_per_source=int(os.getenv("MAX_FEED_ITEMS_PER_SOURCE", "30")),
         max_items_for_model=int(os.getenv("MAX_ITEMS_FOR_MODEL", "40")),
-        max_final_items=int(os.getenv("MAX_FINAL_ITEMS", "12")),
+        max_final_items=int(os.getenv("MAX_FINAL_ITEMS", "20")),
         similarity_threshold=float(os.getenv("SIMILARITY_THRESHOLD", "0.88")),
-        tech_focus_ratio=float(os.getenv("TECH_FOCUS_RATIO", "0.67")),
+        tech_focus_ratio=float(os.getenv("TECH_FOCUS_RATIO", "0.75")),
         enable_ai_summary=os.getenv("ENABLE_AI_SUMMARY", "true").lower() == "true",
         enable_notion=os.getenv("ENABLE_NOTION", "false").lower() == "true",
         enable_telegram=os.getenv("ENABLE_TELEGRAM", "false").lower() == "true",

@@ -1,2 +1,2 @@
 AI summarization failed for provider 'ollama':
-Failed to call Ollama at http://127.0.0.1:11434: HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=180)
+Model output was not valid JSON.

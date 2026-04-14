@@ -19,7 +19,7 @@ def _import_openai():
 
 
 def _finalize_payload(raw_text: str, *, target_date: str, max_final_items: int) -> tuple[str, dict]:
-    payload = _parse_payload_json(raw_text)
+    payload = _coerce_payload(_parse_payload_json(raw_text))
     payload["news"] = standardize_final_items(
         payload.get("news", []),
         target_date=target_date,
@@ -28,6 +28,23 @@ def _finalize_payload(raw_text: str, *, target_date: str, max_final_items: int) 
     payload.setdefault("date", target_date)
     payload.setdefault("overview", "")
     return raw_text, payload
+
+
+def _coerce_payload(payload: dict | list) -> dict:
+    if isinstance(payload, list):
+        return {"news": payload}
+
+    if not isinstance(payload, dict):
+        raise RuntimeError("Model output JSON must be an object or array.")
+
+    if isinstance(payload.get("news"), list):
+        return payload
+
+    single_item_keys = {"title", "summary", "source", "url", "time", "published_at"}
+    if any(key in payload for key in single_item_keys):
+        return {"news": [payload]}
+
+    raise RuntimeError("Model output JSON did not contain a valid 'news' list.")
 
 
 def _parse_payload_json(raw_text: str) -> dict:

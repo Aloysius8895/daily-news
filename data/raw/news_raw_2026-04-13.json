@@ -1,6 +1,6 @@
 {
   "target_date": "2026-04-13",
-  "fetched_at": "2026-04-14T04:57:50.336023Z",
+  "fetched_at": "2026-04-14T08:44:31.769801Z",
   "feeds": [
     {
       "name": "Reuters Technology",
@@ -38,7 +38,7 @@
       "category": "商业"
     }
   ],
-  "count": 47,
+  "count": 48,
   "items": [
     {
       "title": "Elon Musk, Who Owns X, Appears to Post on TikTok",
@@ -50,6 +50,17 @@
       "time": "17:54",
       "url": "https://www.nytimes.com/2026/04/12/technology/elon-musk-tiktok.html",
       "normalized_title": "elon musk who owns x appears to post on tiktok"
+    },
+    {
+      "title": "Quantum computing: A tech race Europe could win?",
+      "summary": "With some promising computing companies in the field, could Europe be a leader in quantum tech?",
+      "source": "BBC Technology",
+      "feed_category": "科技",
+      "published_at": "2026-04-13",
+      "published_datetime": "2026-04-13T23:35:56+00:00",
+      "time": "23:35",
+      "url": "https://www.bbc.com/news/articles/c20q4nv89yzo?at_medium=RSS&at_campaign=rss",
+      "normalized_title": "quantum computing a tech race europe could win"
     },
     {
       "title": "Roblox defends expanded age‑checks after parents raise concerns over errors",
@@ -74,7 +85,7 @@
       "normalized_title": "gtamaker rockstar games hacked again but downplays impact"
     },
     {
-      "title": "Lebanon enters talks with Israel but with no cards to play",
+      "title": "Lebanon seeks peace, but Hezbollah needs to be convinced first",
       "summary": "The Lebanese government go into peace talks with limited influence over the group.",
       "source": "BBC World",
       "feed_category": "国际",
@@ -82,7 +93,7 @@
       "published_datetime": "2026-04-13T23:26:46+00:00",
       "time": "23:26",
       "url": "https://www.bbc.com/news/articles/cr51l794mlyo?at_medium=RSS&at_campaign=rss",
-      "normalized_title": "lebanon enters talks with israel but with no cards to play"
+      "normalized_title": "lebanon seeks peace but hezbollah needs to be convinced first"
     },
     {
       "title": "BBC joins paramedics on duty in Lebanon after Israeli strikes",
@@ -108,7 +119,7 @@
     },
     {
       "title": "Hospital at centre of child HIV outbreak caught reusing syringes in undercover filming",
-      "summary": "Footage shows staff injecting without gloves and reusing syringes, but the hospital boss refuses to acknowledge it is genuine.",
+      "summary": "Footage shows staff in Pakistan injecting without gloves and reusing syringes, but the hospital boss refuses to acknowledge it is genuine.",
       "source": "BBC World",
       "feed_category": "国际",
       "published_at": "2026-04-13",

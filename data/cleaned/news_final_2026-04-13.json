@@ -1,39 +1,266 @@
 {
   "date": "2026-04-13",
-  "overview": "本日有多项重要新闻，包括elon musk在tiktok上发布了一个账号，roblox扩展了其年龄限制，gta-maker rockstar games被hack了两次等。同时，国际方面也有一些关注点，如利比亚与以色列的谈判和BBC在利比亚的工作情况等。",
+  "overview": "2026-04-13 共整理 20 条重要新闻，其中科技与 AI 相关内容 4 条。当前为未经过模型重写的本地兜底结果。",
   "news": [
     {
+      "category": "国际",
+      "title": "Nigeria Air Force orders investigation after dozens killed in airstrike",
+      "summary": "There are reports that more than 100 people were killed, although the authorities have not commented.",
+      "importance": "",
+      "source": "BBC World",
+      "date": "2026-04-13",
+      "time": "10:52",
+      "url": "https://www.bbc.com/news/articles/cgk021z3ejpo?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC World"
+      ]
+    },
+    {
+      "category": "商业",
+      "title": "Investors Brace for a New Hormuz Blockade Threat",
+      "summary": "President Trump’s plan to bar ships from entering or leaving Iranian ports has put markets on edge and added to global economic uncertainty.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-13",
+      "time": "11:53",
+      "url": "https://www.nytimes.com/2026/04/13/business/dealbook/trump-iran-hormuz-blockade.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
+    },
+    {
       "category": "科技",
-      "title": "roblox扩展了其年龄限制",
-      "summary": "roblox扩展了其年龄限制，引发了广泛关注。该公司表示，这是为了确保用户的安全和福祉。",
-      "importance": "入选原因：roblox扩展了其年龄限制",
+      "title": "Roblox defends expanded age‑checks after parents raise concerns over errors",
+      "summary": "With 144m daily users, the gaming company is extending its tech to introduce two age‑specific accounts.",
+      "importance": "",
       "source": "BBC Technology",
       "date": "2026-04-13",
       "time": "12:19",
-      "url": "https://www.bbc.com/news/articles/cj94y9r0p10o",
-      "raw_sources": []
+      "url": "https://www.bbc.com/news/articles/cj94y9r0p10o?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC Technology"
+      ]
+    },
+    {
+      "category": "国际",
+      "title": "Iran carried out highest number of executions in decades",
+      "summary": "Organisations warn many more people could be executed in the wake of the anti-government protests which swept Iran earlier this year.",
+      "importance": "",
+      "source": "BBC World",
+      "date": "2026-04-13",
+      "time": "12:53",
+      "url": "https://www.bbc.com/news/articles/cly9ggzy3ngo?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC World"
+      ]
+    },
+    {
+      "category": "国际",
+      "title": "Peru election drags into second day after ballot delivery fiasco",
+      "summary": "Technical and logistical problems mean Peruvians choosing a new president and members of Congress continue to vote on Monday.",
+      "importance": "",
+      "source": "BBC World",
+      "date": "2026-04-13",
+      "time": "13:07",
+      "url": "https://www.bbc.com/news/articles/c4gd0l2x8j2o?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC World"
+      ]
+    },
+    {
+      "category": "商业",
+      "title": "China’s Electrostate Is Poised to Win From War in the Middle East",
+      "summary": "A cluster of Chinese firms is poised to win big from the energy crisis set off by the war in the Middle East, building on booming investment in artificial intelligence.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-13",
+      "time": "14:38",
+      "url": "https://www.nytimes.com/2026/04/13/business/energy-environment/china-energy-battery-grid.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
     },
     {
       "category": "科技",
-      "title": "gta-maker rockstar games被hack了两次",
-      "summary": "gta-maker rockstar games被hack了两次，引发了广泛关注。该公司表示，这是为了确保其用户的安全和福祉。",
-      "importance": "入选原因：gta-maker rockstar games被hack了两次",
+      "title": "GTA-maker Rockstar Games hacked again but downplays impact",
+      "summary": "The incident marks the second time the games giant has been hacked by young, English-speaking hackers.",
+      "importance": "",
       "source": "BBC Technology",
       "date": "2026-04-13",
       "time": "15:10",
-      "url": "https://www.bbc.com/news/articles/cx2dg5g1le7o",
-      "raw_sources": []
+      "url": "https://www.bbc.com/news/articles/cx2dg5g1le7o?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC Technology"
+      ]
+    },
+    {
+      "category": "国际",
+      "title": "The US blockade of Iran is a gamble. Will it work?",
+      "summary": "The US military is gambling on the blockade denying Iran vital trade - but questions remain on whether the bet will pay off.",
+      "importance": "",
+      "source": "BBC World",
+      "date": "2026-04-13",
+      "time": "15:27",
+      "url": "https://www.bbc.com/news/articles/ckgw8w7mzxgo?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC World"
+      ]
+    },
+    {
+      "category": "商业",
+      "title": "How Iran, Suffering Under Sanctions, Diversified Its Economy",
+      "summary": "As the nation contended with high inflation, high unemployment and unrest before the war, it became more than just an oil exporter.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-13",
+      "time": "15:30",
+      "url": "https://www.nytimes.com/2026/04/13/business/economy/iran-imports-exports-china.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
+    },
+    {
+      "category": "商业",
+      "title": "Trump Administration’s Temporary Reprieve on Russian Oil Expires",
+      "summary": "A sanctions waiver aimed at keeping global oil prices down had allowed Moscow to sell oil currently at sea.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-13",
+      "time": "15:32",
+      "url": "https://www.nytimes.com/2026/04/13/business/trump-iran-russia-oil-sanctions.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
+    },
+    {
+      "category": "国际",
+      "title": "Ex-Nigerian oil minister denies taking bribes",
+      "summary": "Diezani Alison-Madueke is accused of living “a life of luxury” in the UK at properties paid for and refurbished by industry figures.",
+      "importance": "",
+      "source": "BBC World",
+      "date": "2026-04-13",
+      "time": "16:05",
+      "url": "https://www.bbc.com/news/articles/crl141ern74o?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC World"
+      ]
+    },
+    {
+      "category": "国际",
+      "title": "What is a naval blockade and how would it work in Strait of Hormuz?",
+      "summary": "Donald Trump says that the US is blockading the Strait of Hormuz. What does this mean in practice?",
+      "importance": "",
+      "source": "BBC World",
+      "date": "2026-04-13",
+      "time": "16:07",
+      "url": "https://www.bbc.com/news/articles/c5yv6xr6me3o?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC World"
+      ]
+    },
+    {
+      "category": "商业",
+      "title": "Two Iran-linked Ships Passed Through Strait of Hormuz Ahead of U.S. Blockade",
+      "summary": "The vessels exited the Strait of Hormuz on Monday, hours before a U.S. naval blockade took effect.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-13",
+      "time": "17:27",
+      "url": "https://www.nytimes.com/2026/04/13/world/middleeast/strait-hormuz-shipping-iran-blockade-trump.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
+    },
+    {
+      "category": "商业",
+      "title": "Shipping Companies Remain Reluctant to Sail Through Strait of Hormuz",
+      "summary": "The United States said it has started to block vessels doing business with Iran from the strait. Details on how that would work are unclear.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-13",
+      "time": "17:38",
+      "url": "https://www.nytimes.com/2026/04/13/business/shipping-iran-strait-of-hormuz.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
     },
     {
       "category": "科技",
-      "title": "elon musk在tiktok上发布了一个账号",
-      "summary": "elon musk在tiktok上发布了一个账号，引发了广泛关注。该账号的内容与之前的tweet有所不同，可能表明 Musk 正在尝试推广他的新项目X。",
-      "importance": "入选原因：elon musk在tiktok上发布了一个账号，引发了广泛关注",
+      "title": "Elon Musk, Who Owns X, Appears to Post on TikTok",
+      "summary": "A verified account with the @elonmusk handle also recently showed up on Instagram, as the billionaire prepares to take his rocket company SpaceX public.",
+      "importance": "",
       "source": "NYTimes Technology",
       "date": "2026-04-13",
       "time": "17:54",
       "url": "https://www.nytimes.com/2026/04/12/technology/elon-musk-tiktok.html",
-      "raw_sources": []
+      "raw_sources": [
+        "NYTimes Technology"
+      ]
+    },
+    {
+      "category": "商业",
+      "title": "Iran Blockade Sets Up a Test of Which Side Can Endure More Pain",
+      "summary": "President Trump is trying to choke off the country’s lifeline with a blockade of the Strait of Hormuz. But the Iranians are betting that his tolerance for political pain is limited.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-13",
+      "time": "19:01",
+      "url": "https://www.nytimes.com/2026/04/13/us/politics/iran-war-strait-of-hormuz-blockade-economy.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
+    },
+    {
+      "category": "商业",
+      "title": "Goldman Sachs Earnings Show Effects of Iran War",
+      "summary": "It will be a tricky earnings season, as the investment banking giant became the first to show on Monday.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-13",
+      "time": "19:53",
+      "url": "https://www.nytimes.com/2026/04/13/business/goldman-sachs-earnings.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
+    },
+    {
+      "category": "商业",
+      "title": "Oil Prices Are Pressured and Stocks Gain After Trump Revives Talk of a Deal",
+      "summary": "Oil prices surged as markets reopened following news that U.S. peace talks with Iran had ended without a deal.",
+      "importance": "",
+      "source": "NYTimes Business",
+      "date": "2026-04-13",
+      "time": "20:14",
+      "url": "https://www.nytimes.com/2026/04/12/business/oil-prices-surge-above-100-after-peace-talks-fail-and-trump-threatens-blockade.html",
+      "raw_sources": [
+        "NYTimes Business"
+      ]
+    },
+    {
+      "category": "国际",
+      "title": "Spanish PM's wife charged with corruption after two-year probe",
+      "summary": "Begoña Gómez is accused of using her relationship with Pedro Sánchez to advance her private career.",
+      "importance": "",
+      "source": "BBC World",
+      "date": "2026-04-13",
+      "time": "21:09",
+      "url": "https://www.bbc.com/news/articles/c8ejg3wk81no?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC World"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "Quantum computing: A tech race Europe could win?",
+      "summary": "With some promising computing companies in the field, could Europe be a leader in quantum tech?",
+      "importance": "",
+      "source": "BBC Technology",
+      "date": "2026-04-13",
+      "time": "23:35",
+      "url": "https://www.bbc.com/news/articles/c20q4nv89yzo?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC Technology"
+      ]
     }
   ]
 }
