@@ -2,6 +2,7 @@ param(
     [string]$TaskName = "DailyNewsAutoPublish",
     [string]$Time = "07:00",
     [string]$Branch = "April26",
+    [switch]$Unattended,
     [string]$Password
 )
 
@@ -19,7 +20,14 @@ $settings = New-ScheduledTaskSettingsSet `
     -DontStopIfGoingOnBatteries `
     -StartWhenAvailable `
     -WakeToRun `
+    -MultipleInstances IgnoreNew `
+    -RestartCount 3 `
+    -RestartInterval (New-TimeSpan -Minutes 15) `
     -ExecutionTimeLimit (New-TimeSpan -Hours 12)
+
+if ($Unattended -and -not $Password) {
+    throw "Unattended mode requires -Password so Windows can store the account credential for the task."
+}
 
 if ($Password) {
     Register-ScheduledTask `
@@ -47,4 +55,4 @@ Register-ScheduledTask `
     -Force | Out-Null
 
 Write-Host "Scheduled task '$TaskName' created for $Time in logged-in mode."
-Write-Host "To switch to unattended mode, rerun this script with -Password <your Windows password>."
+Write-Host "To switch to unattended mode, rerun this script with -Unattended -Password <your Windows password>."

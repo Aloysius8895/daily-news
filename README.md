@@ -155,6 +155,8 @@ powershell -ExecutionPolicy Bypass -File .\scripts\daily_publish.ps1
 - 运行当天日报生成
 - 只提交当天生成的新闻文件
 - 自动 `git push` 到当前分支
+- 把执行日志写到 `data/logs/publish_*.log`
+- 对 `git pull` / 生成流程 / `git push` 做有限重试
 
 如果你想自动注册一个每天 `07:00` 的 Windows 定时任务，可以运行：
 
@@ -165,8 +167,15 @@ powershell -ExecutionPolicy Bypass -File .\scripts\register_daily_task.ps1 -Task
 如果你希望任务在你未登录 Windows 时也能运行，需要带上当前 Windows 账户密码：
 
 ```bash
-powershell -ExecutionPolicy Bypass -File .\scripts\register_daily_task.ps1 -TaskName DailyNewsAutoPublish -Time 07:00 -Branch April26 -Password "你的Windows密码"
+powershell -ExecutionPolicy Bypass -File .\scripts\register_daily_task.ps1 -TaskName DailyNewsAutoPublish -Time 07:00 -Branch April26 -Unattended -Password "你的Windows密码"
 ```
+
+这个注册脚本默认还会开启：
+
+- 错过时间后尽快补跑
+- 电池模式下允许启动且不中断
+- 同一时间只保留一个实例
+- 失败后最多重试 3 次
 
 ## 可扩展点
 
