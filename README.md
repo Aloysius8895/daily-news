@@ -143,6 +143,31 @@ python -m app.main --dry-run
 
 如果你使用虚拟环境，建议把 `Program/script` 改成虚拟环境里的 `python.exe`。
 
+也可以直接使用项目自带脚本：
+
+```bash
+powershell -ExecutionPolicy Bypass -File .\scripts\daily_publish.ps1
+```
+
+这个脚本会：
+
+- 先 `git pull --rebase`
+- 运行当天日报生成
+- 只提交当天生成的新闻文件
+- 自动 `git push` 到当前分支
+
+如果你想自动注册一个每天 `07:00` 的 Windows 定时任务，可以运行：
+
+```bash
+powershell -ExecutionPolicy Bypass -File .\scripts\register_daily_task.ps1 -TaskName DailyNewsAutoPublish -Time 07:00 -Branch April26
+```
+
+如果你希望任务在你未登录 Windows 时也能运行，需要带上当前 Windows 账户密码：
+
+```bash
+powershell -ExecutionPolicy Bypass -File .\scripts\register_daily_task.ps1 -TaskName DailyNewsAutoPublish -Time 07:00 -Branch April26 -Password "你的Windows密码"
+```
+
 ## 可扩展点
 
 ### 1. 替换新闻源
