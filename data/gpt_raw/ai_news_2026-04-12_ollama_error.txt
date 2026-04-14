@@ -1,0 +1,2 @@
+AI summarization failed for provider 'ollama':
+Model output was not valid JSON.

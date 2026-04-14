@@ -3,17 +3,6 @@
   "overview": "本日有多起国际事件，包括中国、美国和俄罗斯在 AI Arms Race 上加剧竞争，以及印度西班牙边境的政治turmoil。同时，海地发生了人数众多受伤事故，总共至少30人死亡。",
   "news": [
     {
-      "category": "国际",
-      "title": "海地发生人数众多受伤事故，总共至少30人死亡",
-      "summary": "该事故发生在海地的旅游场所，导致大量人员受伤和死亡",
-      "importance": "入选原因：该事件对海地人民产生了重大影响",
-      "source": "BBC World",
-      "date": "2026-04-12",
-      "time": "07:22",
-      "url": "",
-      "raw_sources": []
-    },
-    {
       "category": "科技",
       "title": "中国、美国和俄罗斯在 AI Arms Race 上加剧竞争",
       "summary": "中国、美国和俄罗斯在 AI Arms Race 上加剧竞争，导致全球安全风险升高",
@@ -21,8 +10,7 @@
       "source": "NYTimes Technology",
       "date": "2026-04-12",
       "time": "18:24",
-      "url": "https://www.nytimes.com/2026/04/12/technology/china-russia-us-ai-weapons.html",
-      "raw_sources": []
+      "url": "https://www.nytimes.com/2026/04/12/technology/china-russia-us-ai-weapons.html"
     },
     {
       "category": "国际",
@@ -31,9 +19,16 @@
       "importance": "入选原因：该事件对印度民主制度产生了重大影响",
       "source": "BBC World",
       "date": "2026-04-12",
-      "time": "23:59",
-      "url": "",
-      "raw_sources": []
+      "time": "23:59"
+    },
+    {
+      "category": "国际",
+      "title": "海地发生人数众多受伤事故，总共至少30人死亡",
+      "summary": "该事故发生在海地的旅游场所，导致大量人员受伤和死亡",
+      "importance": "入选原因：该事件对海地人民产生了重大影响",
+      "source": "BBC World",
+      "date": "2026-04-12",
+      "time": "07:22"
     }
   ]
 }

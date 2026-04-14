@@ -53,6 +53,7 @@ DEFAULT_FEEDS = [
 ]
 
 DEFAULT_CATEGORIES = ["国际", "科技", "商业", "金融", "政策", "其他"]
+SUPPORTED_AI_PROVIDERS = ("openai", "ollama", "none")
 
 
 def load_dotenv_if_present() -> None:
@@ -83,6 +84,14 @@ def _parse_feeds() -> list[dict]:
     return _parse_json_env("NEWS_FEEDS", DEFAULT_FEEDS)
 
 
+def normalize_ai_provider(value: str | None) -> str:
+    provider = (value or "openai").strip().lower()
+    if provider not in SUPPORTED_AI_PROVIDERS:
+        supported = ", ".join(SUPPORTED_AI_PROVIDERS)
+        raise ValueError(f"AI provider must be one of: {supported}.")
+    return provider
+
+
 def ensure_directories() -> None:
     for path in (DATA_DIR, RAW_DIR, GPT_RAW_DIR, CLEANED_DIR, ARCHIVE_DIR, LOG_DIR):
         path.mkdir(parents=True, exist_ok=True)
@@ -90,8 +99,14 @@ def ensure_directories() -> None:
 
 @dataclass(slots=True)
 class Settings:
+    ai_provider: str = "openai"
     openai_api_key: str | None = None
     openai_model: str = "gpt-5.4-mini"
+    ollama_base_url: str = "http://127.0.0.1:11434"
+    ollama_model: str = "llama3.2:3b"
+    ollama_timeout_seconds: int = 600
+    ollama_max_items_for_model: int = 20
+    ollama_num_predict: int = 1200
     target_timezone: str = "Asia/Kuala_Lumpur"
     max_feed_items_per_source: int = 30
     max_items_for_model: int = 40
@@ -125,8 +140,14 @@ def load_settings() -> Settings:
     ensure_directories()
 
     return Settings(
+        ai_provider=normalize_ai_provider(os.getenv("AI_PROVIDER", "openai")),
         openai_api_key=os.getenv("OPENAI_API_KEY"),
         openai_model=os.getenv("OPENAI_MODEL", "gpt-5.4-mini"),
+        ollama_base_url=os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434").rstrip("/"),
+        ollama_model=os.getenv("OLLAMA_MODEL", "llama3.2:3b"),
+        ollama_timeout_seconds=int(os.getenv("OLLAMA_TIMEOUT_SECONDS", "600")),
+        ollama_max_items_for_model=int(os.getenv("OLLAMA_MAX_ITEMS_FOR_MODEL", "20")),
+        ollama_num_predict=int(os.getenv("OLLAMA_NUM_PREDICT", "1200")),
         target_timezone=os.getenv("TARGET_TIMEZONE", "Asia/Kuala_Lumpur"),
         max_feed_items_per_source=int(os.getenv("MAX_FEED_ITEMS_PER_SOURCE", "30")),
         max_items_for_model=int(os.getenv("MAX_ITEMS_FOR_MODEL", "40")),

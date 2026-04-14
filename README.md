@@ -5,7 +5,7 @@ launch: python -m app.main --skip-ai --dry-run
 
 - 原始新闻抓取存档
 - 本地去重与分类
-- OpenAI 总结与重写
+- OpenAI / Ollama 总结与重写
 - Markdown / CSV / JSON 导出
 - 可选发送到 Notion / Telegram / Email
 
@@ -47,7 +47,7 @@ python -m app.main
 2. 从 RSS 抓取新闻
 3. 存档 `data/raw/news_raw_YYYY-MM-DD.json`
 4. 本地先做一轮去重
-5. 调 OpenAI Responses API 生成结构化中文摘要
+5. 按配置调用 OpenAI 或 Ollama 生成结构化中文摘要
 6. 保存模型原始输出到 `data/gpt_raw/`
 7. 输出最终结果到 `data/cleaned/`
 8. 可选推送到 Notion / Telegram / Email
@@ -61,11 +61,28 @@ pip install -r requirements.txt
 copy .env.example .env
 ```
 
-然后编辑 `.env`，至少配置：
+然后编辑 `.env`。如果你想用 OpenAI，至少配置：
 
 ```env
 OPENAI_API_KEY=your_key
 OPENAI_MODEL=gpt-5.4-mini
+```
+
+如果你想用本地 Ollama，不需要 OpenAI Key，配置：
+
+```env
+AI_PROVIDER=ollama
+OLLAMA_BASE_URL=http://127.0.0.1:11434
+OLLAMA_MODEL=llama3.2:3b
+OLLAMA_TIMEOUT_SECONDS=600
+OLLAMA_MAX_ITEMS_FOR_MODEL=20
+OLLAMA_NUM_PREDICT=1200
+```
+
+如果本机还没拉模型，可以先执行：
+
+```bash
+ollama pull llama3.2:3b
 ```
 
 ## 运行
@@ -76,13 +93,25 @@ OPENAI_MODEL=gpt-5.4-mini
 python -m app.main
 ```
 
+显式指定使用 OpenAI：
+
+```bash
+python -m app.main --ai-provider openai
+```
+
+显式指定使用 Ollama：
+
+```bash
+python -m app.main --ai-provider ollama
+```
+
 指定日期：
 
 ```bash
 python -m app.main --date 2026-04-11
 ```
 
-只跑抓取和本地清洗，不调用 OpenAI：
+只跑抓取和本地清洗，不调用任何 AI：
 
 ```bash
 python -m app.main --skip-ai
@@ -97,7 +126,7 @@ python -m app.main --dry-run
 ## 输出文件
 
 - 原始抓取：`data/raw/news_raw_YYYY-MM-DD.json`
-- 模型原始输出：`data/gpt_raw/gpt_news_YYYY-MM-DD.json`
+- 模型原始输出：`data/gpt_raw/ai_news_YYYY-MM-DD_<provider>.json`
 - 最终 Markdown：`data/cleaned/news_final_YYYY-MM-DD.md`
 - 最终 CSV：`data/cleaned/news_final_YYYY-MM-DD.csv`
 - 最终 JSON：`data/cleaned/news_final_YYYY-MM-DD.json`
@@ -168,4 +197,6 @@ EMAIL_RECIPIENT=...
 
 - RSS 的发布时间格式不完全统一，脚本会按目标日期过滤，但不同站点仍可能有轻微偏差。
 - 默认 RSS 只是一个可运行起点，正式使用建议替换成你更信任的新闻源。
-- 如果 OpenAI 不可用，脚本会退回本地去重后的兜底结果，链路不会中断。
+- 如果 OpenAI 或 Ollama 不可用，脚本会退回本地去重后的兜底结果，链路不会中断。
+- 可以通过 `.env` 里的 `AI_PROVIDER` 或 CLI 参数 `--ai-provider` 在 `openai`、`ollama`、`none` 之间切换。
+- 对本地 Ollama，默认会限制送入模型的新闻条数、限制最大输出长度并使用更长超时；如果机器较慢，可以继续调大 `OLLAMA_TIMEOUT_SECONDS`，或把 `OLLAMA_MODEL` 换成 `llama3.2:1b`。

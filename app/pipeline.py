@@ -2,16 +2,17 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime
+import json
 from logging import Logger
 from pathlib import Path
 from typing import Callable
 
 from app.clean_news import build_local_fallback, deduplicate_items
-from app.config import ARCHIVE_DIR, CLEANED_DIR, GPT_RAW_DIR, RAW_DIR, Settings
+from app.config import ARCHIVE_DIR, CLEANED_DIR, GPT_RAW_DIR, RAW_DIR, Settings, SUPPORTED_AI_PROVIDERS
 from app.deliver_news import send_email, send_to_notion, send_to_telegram
 from app.export_news import export_csv, export_json, export_markdown, export_timeline_markdown, render_markdown
 from app.fetch_news import fetch_news
-from app.summarize_news import summarize_with_openai
+from app.summarize_news import summarize_news
 from app.utils import write_json, write_text
 
 
@@ -21,6 +22,7 @@ StageFn = Callable[["PipelineContext"], None]
 @dataclass(slots=True)
 class PipelineOptions:
     skip_ai: bool = False
+    ai_provider: str | None = None
     dry_run: bool = False
 
 
@@ -34,6 +36,7 @@ class PipelineContext:
     raw_items: list[dict] = field(default_factory=list)
     deduped_raw_items: list[dict] = field(default_factory=list)
     raw_archive: dict = field(default_factory=dict)
+    used_existing_raw_archive: bool = False
     payload: dict = field(default_factory=dict)
     markdown_content: str = ""
     gpt_raw_text: str = ""
@@ -49,12 +52,29 @@ class PipelineContext:
 
     @property
     def use_ai(self) -> bool:
-        return (
-            self.settings.enable_ai_summary
-            and not self.options.skip_ai
-            and bool(self.settings.openai_api_key)
-            and bool(self.deduped_raw_items)
-        )
+        return self.ai_skip_reason is None
+
+    @property
+    def ai_provider(self) -> str:
+        return (self.options.ai_provider or self.settings.ai_provider).strip().lower()
+
+    @property
+    def ai_skip_reason(self) -> str | None:
+        if not self.settings.enable_ai_summary:
+            return "ENABLE_AI_SUMMARY is false."
+        if self.options.skip_ai:
+            return "--skip-ai is enabled."
+        if not self.deduped_raw_items:
+            return "No deduplicated items are available."
+
+        provider = self.ai_provider
+        if provider == "none":
+            return "AI provider is set to none."
+        if provider not in SUPPORTED_AI_PROVIDERS:
+            return f"Unsupported AI provider: {provider}."
+        if provider == "openai" and not self.settings.openai_api_key:
+            return "OPENAI_API_KEY is missing."
+        return None
 
 
 @dataclass(slots=True)
@@ -81,15 +101,45 @@ class NewsPipeline:
 
 
 def stage_fetch_news(context: PipelineContext) -> None:
-    context.raw_items = fetch_news(
+    raw_path = RAW_DIR / f"news_raw_{context.target_iso}.json"
+    fetched_items = fetch_news(
         feeds=context.settings.feeds,
         target_date=context.target_date,
         max_items_per_source=context.settings.max_feed_items_per_source,
     )
-    context.logger.info("Fetched %s raw items", len(context.raw_items))
+    if fetched_items:
+        context.raw_items = fetched_items
+        context.logger.info("Fetched %s raw items", len(context.raw_items))
+        return
+
+    if raw_path.exists():
+        try:
+            existing_archive = json.loads(raw_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            existing_archive = None
+        if isinstance(existing_archive, dict) and isinstance(existing_archive.get("items"), list):
+            existing_items = existing_archive.get("items", [])
+            if existing_items:
+                context.raw_items = existing_items
+                context.raw_archive = existing_archive
+                context.raw_path = raw_path
+                context.used_existing_raw_archive = True
+                context.logger.info(
+                    "Fetched 0 live raw items; reusing existing archive with %s items from %s",
+                    len(existing_items),
+                    raw_path,
+                )
+                return
+
+    context.raw_items = []
+    context.logger.info("Fetched 0 raw items")
 
 
 def stage_archive_raw(context: PipelineContext) -> None:
+    if context.used_existing_raw_archive and context.raw_path and context.raw_path.exists():
+        context.logger.info("Preserved existing raw archive at %s", context.raw_path)
+        return
+
     context.raw_archive = {
         "target_date": context.target_iso,
         "fetched_at": datetime.now(UTC).isoformat().replace("+00:00", "Z"),
@@ -114,34 +164,55 @@ def stage_deduplicate(context: PipelineContext) -> None:
 
 
 def stage_generate_payload(context: PipelineContext) -> None:
+    provider = context.ai_provider
+    max_items_for_model = context.settings.max_items_for_model
+
+    if provider == "ollama":
+        max_items_for_model = min(
+            context.settings.max_items_for_model,
+            context.settings.ollama_max_items_for_model,
+        )
+
     if context.use_ai:
+        model_name = (
+            context.settings.openai_model
+            if provider == "openai"
+            else context.settings.ollama_model
+        )
         context.logger.info(
-            "Generating summary with OpenAI model %s",
-            context.settings.openai_model,
+            "Generating summary with %s provider using model %s",
+            provider,
+            model_name,
         )
         try:
-            raw_text, payload = summarize_with_openai(
+            raw_text, payload = summarize_news(
+                provider=provider,
                 api_key=context.settings.openai_api_key or "",
-                model=context.settings.openai_model,
+                openai_model=context.settings.openai_model,
+                ollama_base_url=context.settings.ollama_base_url,
+                ollama_model=context.settings.ollama_model,
+                ollama_timeout_seconds=context.settings.ollama_timeout_seconds,
+                ollama_num_predict=context.settings.ollama_num_predict,
                 categories=context.settings.categories,
                 raw_items=context.deduped_raw_items,
                 target_date=context.target_iso,
-                max_items_for_model=context.settings.max_items_for_model,
+                max_items_for_model=max_items_for_model,
                 max_final_items=context.settings.max_final_items,
             )
             context.gpt_raw_text = raw_text
             context.payload = payload
-            context.gpt_raw_path = GPT_RAW_DIR / f"gpt_news_{context.target_iso}.json"
+            context.gpt_raw_path = GPT_RAW_DIR / f"ai_news_{context.target_iso}_{provider}.json"
             write_text(context.gpt_raw_path, raw_text)
             context.logger.info("Saved model raw output to %s", context.gpt_raw_path)
             return
         except Exception as exc:
             context.logger.exception(
-                "AI summarization failed, falling back to local pipeline: %s",
+                "AI summarization failed for provider %s, falling back to local pipeline: %s",
+                provider,
                 exc,
             )
-            context.gpt_raw_text = f"AI summarization failed:\n{exc}\n"
-            context.gpt_raw_path = GPT_RAW_DIR / f"gpt_news_{context.target_iso}_error.txt"
+            context.gpt_raw_text = f"AI summarization failed for provider '{provider}':\n{exc}\n"
+            context.gpt_raw_path = GPT_RAW_DIR / f"ai_news_{context.target_iso}_{provider}_error.txt"
             write_text(context.gpt_raw_path, context.gpt_raw_text)
 
     context.payload = build_local_fallback(
@@ -152,8 +223,8 @@ def stage_generate_payload(context: PipelineContext) -> None:
         tech_focus_ratio=context.settings.tech_focus_ratio,
     )
     if context.gpt_raw_path is None:
-        context.gpt_raw_text = "AI skipped. Local fallback used.\n"
-        context.gpt_raw_path = GPT_RAW_DIR / f"gpt_news_{context.target_iso}.txt"
+        context.gpt_raw_text = f"AI skipped. {context.ai_skip_reason or 'Local fallback used.'}\n"
+        context.gpt_raw_path = GPT_RAW_DIR / f"ai_news_{context.target_iso}_{provider}.txt"
         write_text(context.gpt_raw_path, context.gpt_raw_text)
     context.logger.info("Using local fallback payload")
 
