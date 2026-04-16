@@ -84,7 +84,13 @@ function Invoke-Git {
         [string[]]$Args
     )
 
-    $output = & git @Args 2>&1
+    $previousErrorActionPreference = $ErrorActionPreference
+    try {
+        $ErrorActionPreference = "Continue"
+        $output = & git @Args 2>&1
+    } finally {
+        $ErrorActionPreference = $previousErrorActionPreference
+    }
     Write-CommandOutput -Output $output
     if ($LASTEXITCODE -ne 0) {
         throw "git command failed: git $($Args -join ' ')"
@@ -97,7 +103,13 @@ function Get-GitOutput {
         [string[]]$Args
     )
 
-    $output = & git @Args 2>&1
+    $previousErrorActionPreference = $ErrorActionPreference
+    try {
+        $ErrorActionPreference = "Continue"
+        $output = & git @Args 2>&1
+    } finally {
+        $ErrorActionPreference = $previousErrorActionPreference
+    }
     Write-CommandOutput -Output $output
     if ($LASTEXITCODE -ne 0) {
         throw "git command failed: git $($Args -join ' ')"
