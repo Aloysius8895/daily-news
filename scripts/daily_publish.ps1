@@ -102,96 +102,136 @@ function Get-GitOutput {
     return ($output | Out-String).Trim()
 }
 
+function Save-WorkspaceState {
+    $statusOutput = Get-GitOutput -Args @("status", "--porcelain")
+    if (-not $statusOutput) {
+        return
+    }
+
+    $script:workspaceStashMessage = "daily-publish-autostash-{0}" -f ([guid]::NewGuid().ToString())
+    Write-Log "Working tree is dirty, stashing local changes before publish." "WARN"
+    Invoke-Git -Args @("stash", "push", "--include-untracked", "--message", $script:workspaceStashMessage)
+
+    $stashList = Get-GitOutput -Args @("stash", "list", "--format=%gd%x09%s")
+    $stashEntry = ($stashList -split "\r?\n" | Where-Object { $_ -match [regex]::Escape($script:workspaceStashMessage) } | Select-Object -First 1)
+    if (-not $stashEntry) {
+        throw "Failed to locate the temporary workspace stash."
+    }
+
+    $script:workspaceStashRef = ($stashEntry -split "`t", 2)[0]
+    $script:workspaceStashCreated = $true
+    Write-Log "Stashed local changes as $script:workspaceStashRef"
+}
+
+function Restore-WorkspaceState {
+    if (-not $script:workspaceStashCreated) {
+        return
+    }
+
+    Write-Log "Restoring stashed local changes from $script:workspaceStashRef"
+    try {
+        Invoke-Git -Args @("stash", "apply", "--index", $script:workspaceStashRef)
+        Invoke-Git -Args @("stash", "drop", $script:workspaceStashRef)
+        Write-Log "Restored local changes from $script:workspaceStashRef"
+    } catch {
+        Write-Log "Failed to restore stashed local changes. The stash entry was kept for manual recovery." "ERROR"
+        throw
+    }
+}
+
 Write-Log "Starting daily publish job in $repoRoot"
 
 if (-not $Branch) {
     $Branch = Get-GitOutput -Args @("branch", "--show-current")
 }
 
-$statusOutput = Get-GitOutput -Args @("status", "--porcelain")
-if ($statusOutput) {
-    Write-Log "Aborting because the working tree is dirty." "ERROR"
-    throw "Working tree is not clean. Commit or stash existing changes before running automation."
-}
+$script:workspaceStashCreated = $false
+$script:workspaceStashRef = $null
+$script:workspaceStashMessage = $null
 
-if (-not $SkipPull) {
-    Invoke-WithRetry -Label "git pull --rebase origin $Branch" -Action {
-        Invoke-Git -Args @("pull", "--rebase", "origin", $Branch)
+try {
+    Save-WorkspaceState
+
+    if (-not $SkipPull) {
+        Invoke-WithRetry -Label "git pull --rebase origin $Branch" -Action {
+            Invoke-Git -Args @("pull", "--rebase", "origin", $Branch)
+        }
     }
-}
 
-$mainArgs = @("-m", "app.main")
-if ($Date) {
-    $mainArgs += @("--date", $Date)
-}
-if ($DryRun) {
-    $mainArgs += "--dry-run"
-}
-
-Invoke-WithRetry -Label "Daily news pipeline" -Action {
-    $output = & $pythonPath @mainArgs 2>&1
-    Write-CommandOutput -Output $output
-    if ($LASTEXITCODE -ne 0) {
-        throw "Daily news pipeline failed."
+    $mainArgs = @("-m", "app.main")
+    if ($Date) {
+        $mainArgs += @("--date", $Date)
     }
-} -MaxAttempts 2 -DelaySeconds 30
-
-$targetDate = if ($Date) {
-    $Date
-} else {
-    $computedDate = & $pythonPath -c "from app.config import load_settings; from app.utils import get_target_date; print(get_target_date(None, load_settings().target_timezone).isoformat())" 2>&1
-    Write-CommandOutput -Output $computedDate
-    if ($LASTEXITCODE -ne 0) {
-        throw "Failed to compute target date."
+    if ($DryRun) {
+        $mainArgs += "--dry-run"
     }
-    $computedDate
-}
-$targetDate = ($targetDate | Out-String).Trim()
-$archiveMonth = $targetDate.Substring(0, 7)
-Write-Log "Preparing generated files for $targetDate"
 
-$pathsToStage = @(
-    "data/raw/news_raw_$targetDate.json",
-    "data/cleaned/news_final_$targetDate.json",
-    "data/cleaned/news_final_$targetDate.md",
-    "data/cleaned/news_final_$targetDate.csv",
-    "data/archive/$archiveMonth/$targetDate.md"
-)
+    Invoke-WithRetry -Label "Daily news pipeline" -Action {
+        $output = & $pythonPath @mainArgs 2>&1
+        Write-CommandOutput -Output $output
+        if ($LASTEXITCODE -ne 0) {
+            throw "Daily news pipeline failed."
+        }
+    } -MaxAttempts 2 -DelaySeconds 30
 
-$gptFiles = Get-ChildItem -Path (Join-Path $repoRoot "data\gpt_raw") -File -ErrorAction SilentlyContinue |
-    Where-Object { $_.Name -like "*$targetDate*" } |
-    ForEach-Object { $_.FullName.Substring($repoRoot.Length + 1).Replace('\', '/') }
-
-$pathsToStage += $gptFiles
-
-$existingPaths = $pathsToStage | Where-Object {
-    Test-Path -LiteralPath (Join-Path $repoRoot $_)
-} | Select-Object -Unique
-
-if (-not $existingPaths) {
-    Write-Log "No generated output files found for $targetDate" "ERROR"
-    throw "No generated output files found for $targetDate"
-}
-
-Invoke-Git -Args (@("add", "--") + $existingPaths)
-
-& git diff --cached --quiet -- @existingPaths
-if ($LASTEXITCODE -eq 0) {
-    Write-Host "No changes to commit for $targetDate"
-    exit 0
-}
-if ($LASTEXITCODE -ne 1) {
-    throw "git diff --cached failed."
-}
-
-$commitMessage = "Daily news $targetDate"
-Invoke-Git -Args @("commit", "-m", $commitMessage)
-
-if (-not $SkipPush) {
-    Invoke-WithRetry -Label "git push origin $Branch" -Action {
-        Invoke-Git -Args @("push", "origin", $Branch)
+    $targetDate = if ($Date) {
+        $Date
+    } else {
+        $computedDate = & $pythonPath -c "from app.config import load_settings; from app.utils import get_target_date; print(get_target_date(None, load_settings().target_timezone).isoformat())" 2>&1
+        Write-CommandOutput -Output $computedDate
+        if ($LASTEXITCODE -ne 0) {
+            throw "Failed to compute target date."
+        }
+        $computedDate
     }
-}
+    $targetDate = ($targetDate | Out-String).Trim()
+    $archiveMonth = $targetDate.Substring(0, 7)
+    Write-Log "Preparing generated files for $targetDate"
 
-Write-Log "Daily news pipeline completed and published for $targetDate on branch $Branch"
-Write-Host "Daily news pipeline completed and published for $targetDate on branch $Branch"
+    $pathsToStage = @(
+        "data/raw/news_raw_$targetDate.json",
+        "data/cleaned/news_final_$targetDate.json",
+        "data/cleaned/news_final_$targetDate.md",
+        "data/cleaned/news_final_$targetDate.csv",
+        "data/archive/$archiveMonth/$targetDate.md"
+    )
+
+    $gptFiles = Get-ChildItem -Path (Join-Path $repoRoot "data\gpt_raw") -File -ErrorAction SilentlyContinue |
+        Where-Object { $_.Name -like "*$targetDate*" } |
+        ForEach-Object { $_.FullName.Substring($repoRoot.Length + 1).Replace('\', '/') }
+
+    $pathsToStage += $gptFiles
+
+    $existingPaths = $pathsToStage | Where-Object {
+        Test-Path -LiteralPath (Join-Path $repoRoot $_)
+    } | Select-Object -Unique
+
+    if (-not $existingPaths) {
+        Write-Log "No generated output files found for $targetDate" "ERROR"
+        throw "No generated output files found for $targetDate"
+    }
+
+    Invoke-Git -Args (@("add", "--") + $existingPaths)
+
+    & git diff --cached --quiet -- @existingPaths
+    if ($LASTEXITCODE -eq 0) {
+        Write-Log "No changes to commit for $targetDate"
+        Write-Host "No changes to commit for $targetDate"
+    } elseif ($LASTEXITCODE -ne 1) {
+        throw "git diff --cached failed."
+    } else {
+        $commitMessage = "Daily news $targetDate"
+        Invoke-Git -Args @("commit", "-m", $commitMessage)
+
+        if (-not $SkipPush) {
+            Invoke-WithRetry -Label "git push origin $Branch" -Action {
+                Invoke-Git -Args @("push", "origin", $Branch)
+            }
+        }
+
+        Write-Log "Daily news pipeline completed and published for $targetDate on branch $Branch"
+        Write-Host "Daily news pipeline completed and published for $targetDate on branch $Branch"
+    }
+} finally {
+    Restore-WorkspaceState
+}
