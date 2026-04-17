@@ -1,0 +1,240 @@
+{
+  "target_date": "2026-04-14",
+  "fetched_at": "2026-04-17T11:02:05.486094Z",
+  "feeds": [
+    {
+      "name": "Reuters Technology",
+      "url": "https://feeds.reuters.com/reuters/technologyNews",
+      "category": "科技"
+    },
+    {
+      "name": "NYTimes Technology",
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+      "category": "科技"
+    },
+    {
+      "name": "BBC Technology",
+      "url": "http://feeds.bbci.co.uk/news/technology/rss.xml",
+      "category": "科技"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/feed/",
+      "category": "科技"
+    },
+    {
+      "name": "WIRED AI",
+      "url": "https://www.wired.com/feed/tag/ai/latest/rss",
+      "category": "科技"
+    },
+    {
+      "name": "WIRED Security",
+      "url": "https://www.wired.com/feed/category/security/latest/rss",
+      "category": "科技"
+    },
+    {
+      "name": "WIRED Top Stories",
+      "url": "https://www.wired.com/feed/rss",
+      "category": "科技"
+    },
+    {
+      "name": "Reuters World",
+      "url": "https://feeds.reuters.com/Reuters/worldNews",
+      "category": "国际"
+    },
+    {
+      "name": "Reuters Business",
+      "url": "https://feeds.reuters.com/reuters/businessNews",
+      "category": "商业"
+    },
+    {
+      "name": "BBC World",
+      "url": "http://feeds.bbci.co.uk/news/world/rss.xml",
+      "category": "国际"
+    },
+    {
+      "name": "NYTimes Business",
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+      "category": "商业"
+    }
+  ],
+  "count": 16,
+  "items": [
+    {
+      "title": "Amazon Buys Globalstar for $10.8 Billion, Movingto Expand Its Satellite Internet Service",
+      "summary": "The e-commerce giant is buying Globalstar, a satellite communications company, as it aims to expand its own satellite internet service to compete with Elon Musk’s Starlink.",
+      "source": "NYTimes Technology",
+      "feed_category": "科技",
+      "published_at": "2026-04-14",
+      "published_datetime": "2026-04-14T17:53:43+00:00",
+      "time": "17:53",
+      "url": "https://www.nytimes.com/2026/04/14/technology/amazon-buys-globalstar-space-internet.html",
+      "normalized_title": "amazon buys globalstar for 108 billion movingto expand its satellite internet service"
+    },
+    {
+      "title": "Man Held in Attack on OpenAI Chief’s Home Had List of A.I. Leaders, Officials Say",
+      "summary": "The authorities said a 20-year-old Texas man charged with throwing a homemade bomb at the gate of Sam Altman’s home had written at length about the threat of A.I.",
+      "source": "NYTimes Technology",
+      "feed_category": "科技",
+      "published_at": "2026-04-14",
+      "published_datetime": "2026-04-14T01:57:23+00:00",
+      "time": "01:57",
+      "url": "https://www.nytimes.com/2026/04/13/technology/man-who-attacked-openai-ceos-home-had-list-of-other-ai-executives.html",
+      "normalized_title": "man held in attack on openai chiefs home had list of ai leaders officials say"
+    },
+    {
+      "title": "Man charged with attempted murder over attack on home of OpenAI's Sam Altman",
+      "summary": "The Texas man, who also faces federal felony charges, allegedly had documents advocating for violence against AI executives.",
+      "source": "BBC Technology",
+      "feed_category": "科技",
+      "published_at": "2026-04-14",
+      "published_datetime": "2026-04-14T01:05:54+00:00",
+      "time": "01:05",
+      "url": "https://www.bbc.com/news/articles/cq597n1pg6lo?at_medium=RSS&at_campaign=rss",
+      "normalized_title": "man charged with attempted murder over attack on home of openais sam altman"
+    },
+    {
+      "title": "Tech Life",
+      "summary": "Can pedestrians, runners and cyclists safely share the road with self-driving vehicles?",
+      "source": "BBC Technology",
+      "feed_category": "科技",
+      "published_at": "2026-04-14",
+      "published_datetime": "2026-04-14T21:30:00+00:00",
+      "time": "21:30",
+      "url": "https://www.bbc.co.uk/sounds/play/w3ct8jxq?at_medium=RSS&at_campaign=rss",
+      "normalized_title": "tech life"
+    },
+    {
+      "title": "How to Use Google Chrome’s New AI-Powered ‘Skills’",
+      "summary": "The premade Skills available through the Gemini sidebar in Chrome include ways to maximize protein in recipes or summarize YouTube videos.",
+      "source": "WIRED AI",
+      "feed_category": "科技",
+      "published_at": "2026-04-14",
+      "published_datetime": "2026-04-14T17:00:00+00:00",
+      "time": "17:00",
+      "url": "https://www.wired.com/story/how-to-use-google-chrome-ai-powered-skills/",
+      "normalized_title": "how to use google chromes new aipowered skills"
+    },
+    {
+      "title": "In the Wake of Anthropic’s Mythos, OpenAI Has a New Cybersecurity Model—and Strategy",
+      "summary": "OpenAI says its safeguards “sufficiently reduce cyber risk” for now, while GPT-5.4-Cyber is a new cybersecurity-focused model.",
+      "source": "WIRED Security",
+      "feed_category": "科技",
+      "published_at": "2026-04-14",
+      "published_datetime": "2026-04-14T20:00:17+00:00",
+      "time": "20:00",
+      "url": "https://www.wired.com/story/in-the-wake-of-anthropics-mythos-openai-has-a-new-cybersecurity-model-and-strategy/",
+      "normalized_title": "in the wake of anthropics mythos openai has a new cybersecurity modeland strategy"
+    },
+    {
+      "title": "Telegram Is Still Hosting a Sanctioned $21 Billion Crypto Scammer Black Market",
+      "summary": "The UK designated Xinbi Guarantee as an enabler of crypto scammers and human trafficking weeks ago. Telegram is still hosting it in plain sight.",
+      "source": "WIRED Security",
+      "feed_category": "科技",
+      "published_at": "2026-04-14",
+      "published_datetime": "2026-04-14T18:56:08+00:00",
+      "time": "18:56",
+      "url": "https://www.wired.com/story/telegram-is-still-hosting-a-sanctioned-21-billion-crypto-scammer-black-market/",
+      "normalized_title": "telegram is still hosting a sanctioned 21 billion crypto scammer black market"
+    },
+    {
+      "title": "The FCC Has a Fast Lane for Complaints About Trump’s Media Critics",
+      "summary": "Internal emails obtained by WIRED reveal how a conservative legal group with a direct line into FCC chairman Brendan Carr’s office built the case against Jimmy Kimmel and his employees.",
+      "source": "WIRED Security",
+      "feed_category": "科技",
+      "published_at": "2026-04-14",
+      "published_datetime": "2026-04-14T15:12:28+00:00",
+      "time": "15:12",
+      "url": "https://www.wired.com/story/the-fcc-has-a-fast-lane-for-complaints-about-trumps-media-critics/",
+      "normalized_title": "the fcc has a fast lane for complaints about trumps media critics"
+    },
+    {
+      "title": "N.F.L. Reporter Resigns From The Athletic Amid an Investigation",
+      "summary": "The publication, which is owned by The New York Times, was investigating the conduct of Dianna Russini after photographs showed her with the head coach of the New England Patriots.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-14",
+      "published_datetime": "2026-04-14T21:05:22+00:00",
+      "time": "21:05",
+      "url": "https://www.nytimes.com/2026/04/14/business/media/dianna-russini-athletic-resigns.html",
+      "normalized_title": "nfl reporter resigns from the athletic amid an investigation"
+    },
+    {
+      "title": "Amazon Buys Globalstar for $10.8 Billion, Movingto Expand Its Satellite Internet Service",
+      "summary": "The e-commerce giant is buying Globalstar, a satellite communications company, as it aims to expand its own satellite internet service to compete with Elon Musk’s Starlink.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-14",
+      "published_datetime": "2026-04-14T17:53:43+00:00",
+      "time": "17:53",
+      "url": "https://www.nytimes.com/2026/04/14/technology/amazon-buys-globalstar-space-internet.html",
+      "normalized_title": "amazon buys globalstar for 108 billion movingto expand its satellite internet service"
+    },
+    {
+      "title": "Bessent Questions the Cause of Climate Change and Its Economic Toll",
+      "summary": "The Treasury secretary said it is “difficult to deconstruct” the reasons for global warming, which he described as a belief of the “elite.”",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-14",
+      "published_datetime": "2026-04-14T16:32:32+00:00",
+      "time": "16:32",
+      "url": "https://www.nytimes.com/2026/04/14/business/scott-bessent-climate-change-trump.html",
+      "normalized_title": "bessent questions the cause of climate change and its economic toll"
+    },
+    {
+      "title": "Pittsburgh Post-Gazette Saved From Closure by Nonprofit",
+      "summary": "The Venetoulis Institute of Local Journalism, which operates The Baltimore Banner, has bought The Post-Gazette. The newspaper was set to shut down next month.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-14",
+      "published_datetime": "2026-04-14T15:00:07+00:00",
+      "time": "15:00",
+      "url": "https://www.nytimes.com/2026/04/14/business/media/pittsburgh-post-gazette-bought-venetoulis-institute.html",
+      "normalized_title": "pittsburgh postgazette saved from closure by nonprofit"
+    },
+    {
+      "title": "Ricky Cobb Has Built a Mini-Empire Through ’70s Nostalgia",
+      "summary": "Ricky Cobb has built a big online following with his irreverent postings about the absurdities of the 1970s.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-14",
+      "published_datetime": "2026-04-14T21:34:46+00:00",
+      "time": "21:34",
+      "url": "https://www.nytimes.com/2026/04/14/business/ricky-cobb-1970s-super70ssports.html",
+      "normalized_title": "ricky cobb has built a miniempire through 70s nostalgia"
+    },
+    {
+      "title": "JPMorgan Sees Resilience in U.S. Economy Despite Iran War",
+      "summary": "The nation’s largest bank said it earned record trading profits in the first quarter but tempered expectations overall for its business.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-14",
+      "published_datetime": "2026-04-14T19:45:50+00:00",
+      "time": "19:45",
+      "url": "https://www.nytimes.com/2026/04/14/business/jpmorgan-wells-fargo-citi-earnings.html",
+      "normalized_title": "jpmorgan sees resilience in us economy despite iran war"
+    },
+    {
+      "title": "Middle East War Will Slow Global Economic Growth, I.M.F. Warns",
+      "summary": "The conflict could also fuel another bout of inflation, according to the International Monetary Fund.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-14",
+      "published_datetime": "2026-04-14T13:50:22+00:00",
+      "time": "13:50",
+      "url": "https://www.nytimes.com/2026/04/14/business/iran-war-imf-economic-growth.html",
+      "normalized_title": "middle east war will slow global economic growth imf warns"
+    },
+    {
+      "title": "What’s Driving the Wartime Stock Rebound",
+      "summary": "The S&amp;P 500 has recouped all its losses since the Middle East war started on Feb. 28, as a bullish “vibe shift” takes hold among some investors.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-14",
+      "published_datetime": "2026-04-14T12:14:07+00:00",
+      "time": "12:14",
+      "url": "https://www.nytimes.com/2026/04/14/business/dealbook/stocks-us-iran-war.html",
+      "normalized_title": "whats driving the wartime stock rebound"
+    }
+  ]
+}
