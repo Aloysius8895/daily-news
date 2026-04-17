@@ -1,0 +1,559 @@
+{
+  "target_date": "2026-04-15",
+  "fetched_at": "2026-04-17T11:03:44.577293Z",
+  "feeds": [
+    {
+      "name": "Reuters Technology",
+      "url": "https://feeds.reuters.com/reuters/technologyNews",
+      "category": "科技"
+    },
+    {
+      "name": "NYTimes Technology",
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+      "category": "科技"
+    },
+    {
+      "name": "BBC Technology",
+      "url": "http://feeds.bbci.co.uk/news/technology/rss.xml",
+      "category": "科技"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/feed/",
+      "category": "科技"
+    },
+    {
+      "name": "WIRED AI",
+      "url": "https://www.wired.com/feed/tag/ai/latest/rss",
+      "category": "科技"
+    },
+    {
+      "name": "WIRED Security",
+      "url": "https://www.wired.com/feed/category/security/latest/rss",
+      "category": "科技"
+    },
+    {
+      "name": "WIRED Top Stories",
+      "url": "https://www.wired.com/feed/rss",
+      "category": "科技"
+    },
+    {
+      "name": "Reuters World",
+      "url": "https://feeds.reuters.com/Reuters/worldNews",
+      "category": "国际"
+    },
+    {
+      "name": "Reuters Business",
+      "url": "https://feeds.reuters.com/reuters/businessNews",
+      "category": "商业"
+    },
+    {
+      "name": "BBC World",
+      "url": "http://feeds.bbci.co.uk/news/world/rss.xml",
+      "category": "国际"
+    },
+    {
+      "name": "NYTimes Business",
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+      "category": "商业"
+    }
+  ],
+  "count": 45,
+  "items": [
+    {
+      "title": "That Meeting You Hate May Keep A.I. From Stealing Your Job",
+      "summary": "As artificial intelligence makes many tasks easier, the human work of cajoling, arm-twisting and reassuring appears to be rising in importance.",
+      "source": "NYTimes Technology",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T21:01:25+00:00",
+      "time": "21:01",
+      "url": "https://www.nytimes.com/2026/04/15/business/ai-jobs-human-work.html",
+      "normalized_title": "that meeting you hate may keep ai from stealing your job"
+    },
+    {
+      "title": "Snap Is Laying Off 16% of Full-Time Staff as It Embraces A.I.",
+      "summary": "The company, which owns the social media app Snapchat, said it was laying off about 1,000 employees as it increased its reliance on artificial intelligence.",
+      "source": "NYTimes Technology",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T18:21:18+00:00",
+      "time": "18:21",
+      "url": "https://www.nytimes.com/2026/04/15/business/snap-layoffs-snapchat.html",
+      "normalized_title": "snap is laying off 16 of fulltime staff as it embraces ai"
+    },
+    {
+      "title": "Ford Says Doug Field, Who Led Company's E.V. Push, is Leaving",
+      "summary": "Doug Field, a former Tesla and Apple executive, had returned to Ford Motor in 2021 to help develop new electric models and software.",
+      "source": "NYTimes Technology",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T21:22:20+00:00",
+      "time": "21:22",
+      "url": "https://www.nytimes.com/2026/04/15/business/ford-electric-vehicles-doug-field.html",
+      "normalized_title": "ford says doug field who led companys ev push is leaving"
+    },
+    {
+      "title": "Ad Companies Settle With F.T.C. Over Claims of Harm to Conservative Sites",
+      "summary": "WPP, Dentsu and Publicis settled claims they colluded on policies to combat misinformation, denying ad revenue to publishers on the right.",
+      "source": "NYTimes Technology",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T18:08:36+00:00",
+      "time": "18:08",
+      "url": "https://www.nytimes.com/2026/04/15/technology/ftc-ad-companies-settlement.html",
+      "normalized_title": "ad companies settle with ftc over claims of harm to conservative sites"
+    },
+    {
+      "title": "Spice Up Your Cooking Skills With Help From Your Phone",
+      "summary": "Recipe apps and artificial intelligence can give you a boost, but free tools already on your device can also assist with meal planning and preparation.",
+      "source": "NYTimes Technology",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T09:04:06+00:00",
+      "time": "09:04",
+      "url": "https://www.nytimes.com/2026/04/15/technology/personaltech/recipes-cooking-ai.html",
+      "normalized_title": "spice up your cooking skills with help from your phone"
+    },
+    {
+      "title": "We Don’t Really Know How A.I. Works. That’s a Problem.",
+      "summary": "For us to trust it on certain subjects, researchers in the growing field of interpretability might need to learn how to open the black box of its brain.",
+      "source": "NYTimes Technology",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T15:27:27+00:00",
+      "time": "15:27",
+      "url": "https://www.nytimes.com/2026/04/15/magazine/ai-black-box-interpretability-research.html",
+      "normalized_title": "we dont really know how ai works thats a problem"
+    },
+    {
+      "title": "How Older Adults Are Using VR to Counter Social Isolation",
+      "summary": "New tools tailored for use in senior living communities allow for shared experiences and social bonding.",
+      "source": "NYTimes Technology",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T09:00:11+00:00",
+      "time": "09:00",
+      "url": "https://www.nytimes.com/2026/04/15/technology/vr-technology-elderly-community-social-isolation.html",
+      "normalized_title": "how older adults are using vr to counter social isolation"
+    },
+    {
+      "title": "Like Anthropic, OpenAI Will Share Latest Technology Only With Trusted Companies",
+      "summary": "The maker of ChatGPT announced the limited release of GPT-5.4-Cyber, a technology designed to find security holes in software.",
+      "source": "NYTimes Technology",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T00:25:41+00:00",
+      "time": "00:25",
+      "url": "https://www.nytimes.com/2026/04/14/technology/openai-cybersecurity-gpt54-cyber.html",
+      "normalized_title": "like anthropic openai will share latest technology only with trusted companies"
+    },
+    {
+      "title": "Booking.com customers warned of 'reservation hijacking' after hack",
+      "summary": "The travel platform said it had changed Pins to protect customers but would not say how many were affected.",
+      "source": "BBC Technology",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T12:05:58+00:00",
+      "time": "12:05",
+      "url": "https://www.bbc.com/news/articles/cly00jnnxypo?at_medium=RSS&at_campaign=rss",
+      "normalized_title": "bookingcom customers warned of reservation hijacking after hack"
+    },
+    {
+      "title": "Google to punish sites that trap people in with back button tricks",
+      "summary": "The tech giant said it will punish sites that block back button navigation from June.",
+      "source": "BBC Technology",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T10:02:19+00:00",
+      "time": "10:02",
+      "url": "https://www.bbc.com/news/articles/c05dd2yj3z3o?at_medium=RSS&at_campaign=rss",
+      "normalized_title": "google to punish sites that trap people in with back button tricks"
+    },
+    {
+      "title": "AI Could Democratize One of Tech's Most Valuable Resources",
+      "summary": "AI is making it easier to design chips and optimize software for different silicon. Some startups envision a revolution in chipmaking.",
+      "source": "WIRED AI",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T18:00:00+00:00",
+      "time": "18:00",
+      "url": "https://www.wired.com/story/ai-could-democratize-one-of-techs-most-valuable-resources/",
+      "normalized_title": "ai could democratize one of techs most valuable resources"
+    },
+    {
+      "title": "Allbirds Is Pivoting to AI Compute. Sure, Why Not",
+      "summary": "Once a $4 billion apparel juggernaut, Allbirds will rebrand as NewBird AI, a “GPU-as-a-Service” company. Hey, if you can't beat ’em, join ’em.",
+      "source": "WIRED AI",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T14:58:08+00:00",
+      "time": "14:58",
+      "url": "https://www.wired.com/story/allbirds-is-pivoting-to-ai-compute-sure-why-not/",
+      "normalized_title": "allbirds is pivoting to ai compute sure why not"
+    },
+    {
+      "title": "AI Slop Is Making the Internet Fake-Happy",
+      "summary": "A new study examines the impact of the rise of AI-generated websites on the internet—and found some surprising results.",
+      "source": "WIRED AI",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T11:00:00+00:00",
+      "time": "11:00",
+      "url": "https://www.wired.com/story/ai-slop-is-changing-the-internet-just-not-how-you-might-think/",
+      "normalized_title": "ai slop is making the internet fakehappy"
+    },
+    {
+      "title": "The Deepfake Nudes Crisis in Schools Is Much Worse Than You Thought",
+      "summary": "An analysis by WIRED and Indicator found nearly 90 schools and 600 students around the world impacted by AI-generated deepfake nude images—and the problem shows no signs of going away.",
+      "source": "WIRED AI",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T10:00:00+00:00",
+      "time": "10:00",
+      "url": "https://www.wired.com/story/deepfake-nudify-schools-global-crisis/",
+      "normalized_title": "the deepfake nudes crisis in schools is much worse than you thought"
+    },
+    {
+      "title": "The Deepfake Nudes Crisis in Schools Is Much Worse Than You Thought",
+      "summary": "An analysis by WIRED and Indicator found nearly 90 schools and 600 students around the world impacted by AI-generated deepfake nude images—and the problem shows no signs of going away.",
+      "source": "WIRED Security",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T10:00:00+00:00",
+      "time": "10:00",
+      "url": "https://www.wired.com/story/deepfake-nudify-schools-global-crisis/",
+      "normalized_title": "the deepfake nudes crisis in schools is much worse than you thought"
+    },
+    {
+      "title": "‘Avatar: Aang, The Last Airbender’ Leaked Online. Some Fans Say Paramount Deserves the Fallout",
+      "summary": "After the full movie leaked, animators mourned the chance to release their work as intended. Others feel the leak is justified in light of Paramount’s marketing blunders and association with Trump.",
+      "source": "WIRED Top Stories",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T22:53:44+00:00",
+      "time": "22:53",
+      "url": "https://www.wired.com/story/the-last-airbender-leak-fans-say-paramount-deserves-fallout/",
+      "normalized_title": "avatar aang the last airbender leaked online some fans say paramount deserves the fallout"
+    },
+    {
+      "title": "NASA Wants to Put Nuclear Reactors on the Moon",
+      "summary": "The White House has announced that NASA will work with the Departments of Defense and Energy to put nuclear reactors in orbit and on the surface of the moon.",
+      "source": "WIRED Top Stories",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T18:55:52+00:00",
+      "time": "18:55",
+      "url": "https://www.wired.com/story/nasa-wants-to-put-nuclear-reactors-on-the-moon/",
+      "normalized_title": "nasa wants to put nuclear reactors on the moon"
+    },
+    {
+      "title": "AI Could Democratize One of Tech's Most Valuable Resources",
+      "summary": "AI is making it easier to design chips and optimize software for different silicon. Some startups envision a revolution in chipmaking.",
+      "source": "WIRED Top Stories",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T18:00:00+00:00",
+      "time": "18:00",
+      "url": "https://www.wired.com/story/ai-could-democratize-one-of-techs-most-valuable-resources/",
+      "normalized_title": "ai could democratize one of techs most valuable resources"
+    },
+    {
+      "title": "Microsoft Surface PCs Are Getting Big Price Hikes, and the Cheaper Models Are Going Away",
+      "summary": "The price increases range from $200 to $300, and Microsoft doesn’t sell a sub-$1,000 Surface anymore. The rising cost of consumer tech is a common theme in 2026.",
+      "source": "WIRED Top Stories",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T17:28:30+00:00",
+      "time": "17:28",
+      "url": "https://www.wired.com/story/microsoft-surface-price-hikes-cheaper-models-going-away/",
+      "normalized_title": "microsoft surface pcs are getting big price hikes and the cheaper models are going away"
+    },
+    {
+      "title": "Why Amazon Is Buying Globalstar—and What It Means for Your iPhone",
+      "summary": "Amazon is paying more than $11 billion for a small satellite company.",
+      "source": "WIRED Top Stories",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T16:19:40+00:00",
+      "time": "16:19",
+      "url": "https://www.wired.com/story/why-amazon-is-buying-globalstar-and-what-it-means-for-your-iphone/",
+      "normalized_title": "why amazon is buying globalstarand what it means for your iphone"
+    },
+    {
+      "title": "The US Government Will Ask Data Centers How Much Power They Use",
+      "summary": "In a letter obtained by WIRED, the Energy Information Administration tells two senators that it plans to develop a mandatory assessment of data centers' energy use.",
+      "source": "WIRED Top Stories",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T16:00:27+00:00",
+      "time": "16:00",
+      "url": "https://www.wired.com/story/the-us-government-to-ask-data-centers-how-much-power-they-use/",
+      "normalized_title": "the us government will ask data centers how much power they use"
+    },
+    {
+      "title": "MAGA Is Starting to Look Beyond Trump",
+      "summary": "A seemingly endless torrent of criticism directed toward Trump from former MAGA allies suggests the president is losing support from his base.",
+      "source": "WIRED Top Stories",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T15:00:00+00:00",
+      "time": "15:00",
+      "url": "https://www.wired.com/story/maga-is-starting-to-look-beyond-trump/",
+      "normalized_title": "maga is starting to look beyond trump"
+    },
+    {
+      "title": "Allbirds Is Pivoting to AI Compute. Sure, Why Not",
+      "summary": "Once a $4 billion apparel juggernaut, Allbirds will rebrand as NewBird AI, a “GPU-as-a-Service” company. Hey, if you can't beat ’em, join ’em.",
+      "source": "WIRED Top Stories",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T14:58:08+00:00",
+      "time": "14:58",
+      "url": "https://www.wired.com/story/allbirds-is-pivoting-to-ai-compute-sure-why-not/",
+      "normalized_title": "allbirds is pivoting to ai compute sure why not"
+    },
+    {
+      "title": "Best Smart Smoke Detector (and Why You Still Need a Dumb One)",
+      "summary": "Every smart smoke alarm I’ve tested has one potentially fatal flaw, trading fewer nuisance alarms for a risky sensor strategy.",
+      "source": "WIRED Top Stories",
+      "feed_category": "科技",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T13:18:00+00:00",
+      "time": "13:18",
+      "url": "https://www.wired.com/story/should-smoke-alarms-be-smart/",
+      "normalized_title": "best smart smoke detector and why you still need a dumb one"
+    },
+    {
+      "title": "Back to books - Sweden's schools cutting back on digital learning",
+      "summary": "Swedish classrooms swap laptops for books, pens and paper, raising concerns from the tech sector.",
+      "source": "BBC World",
+      "feed_category": "国际",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T23:06:43+00:00",
+      "time": "23:06",
+      "url": "https://www.bbc.com/news/articles/cly0vk77vdko?at_medium=RSS&at_campaign=rss",
+      "normalized_title": "back to books  swedens schools cutting back on digital learning"
+    },
+    {
+      "title": "5 Takeaways From the Live Nation Antitrust Trial",
+      "summary": "A jury found that the concert giant operated as a monopoly, a verdict that could have major reverberations in the music industry.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T23:35:00+00:00",
+      "time": "23:35",
+      "url": "https://www.nytimes.com/2026/04/15/arts/music/live-nation-antitrust-trial-monopoly-takeaways.html",
+      "normalized_title": "5 takeaways from the live nation antitrust trial"
+    },
+    {
+      "title": "U.K.’s Starmer Summons U.S. Social Media Companies Over Child Safety Online",
+      "summary": "The British prime minister will meet with executives from Meta, Google and other companies on Thursday as his government explores how to protect children from online harms.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T21:30:07+00:00",
+      "time": "21:30",
+      "url": "https://www.nytimes.com/2026/04/15/world/europe/starmer-social-media-child-safety-meta-google.html",
+      "normalized_title": "uks starmer summons us social media companies over child safety online"
+    },
+    {
+      "title": "Ford Says Doug Field, Who Led Company's E.V. Push, is Leaving",
+      "summary": "Doug Field, a former Tesla and Apple executive, had returned to Ford Motor in 2021 to help develop new electric models and software.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T21:22:20+00:00",
+      "time": "21:22",
+      "url": "https://www.nytimes.com/2026/04/15/business/ford-electric-vehicles-doug-field.html",
+      "normalized_title": "ford says doug field who led companys ev push is leaving"
+    },
+    {
+      "title": "Trump’s Quest for More Sway Over Fed Faces Fresh Hurdles",
+      "summary": "Jerome H. Powell’s term as chair of the Federal Reserve ends on May 15, but it appears increasingly likely that he will stay on in some capacity at the central bank after that.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T19:27:34+00:00",
+      "time": "19:27",
+      "url": "https://www.nytimes.com/2026/04/15/business/trump-federal-bank-fresh-hurdles.html",
+      "normalized_title": "trumps quest for more sway over fed faces fresh hurdles"
+    },
+    {
+      "title": "S&P 500 Hits Record High as Stock Market Looks Beyond Iran War",
+      "summary": "Investors appear to be treating an end to the U.S.-Israeli war with Iran as a foregone conclusion, as the S&amp;P 500 closes above 7,000.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T20:13:13+00:00",
+      "time": "20:13",
+      "url": "https://www.nytimes.com/2026/04/15/business/stocks-record-iran-war.html",
+      "normalized_title": "sp 500 hits record high as stock market looks beyond iran war"
+    },
+    {
+      "title": "Snap Is Laying Off 16% of Full-Time Staff as It Embraces A.I.",
+      "summary": "The company, which owns the social media app Snapchat, said it was laying off about 1,000 employees as it increased its reliance on artificial intelligence.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T18:21:18+00:00",
+      "time": "18:21",
+      "url": "https://www.nytimes.com/2026/04/15/business/snap-layoffs-snapchat.html",
+      "normalized_title": "snap is laying off 16 of fulltime staff as it embraces ai"
+    },
+    {
+      "title": "Debt Alarms Ring as Countries Rack Up More Emergency Spending",
+      "summary": "Amid signs of a prolonged period of high energy costs, policymakers are urging restraint as governments open up the public till to protect households and businesses.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T18:41:48+00:00",
+      "time": "18:41",
+      "url": "https://www.nytimes.com/2026/04/15/business/iran-war-fiscal-debt-impact.html",
+      "normalized_title": "debt alarms ring as countries rack up more emergency spending"
+    },
+    {
+      "title": "Iran-Linked Ships Slow or Stop as U.S. Navy Enforces Strait of Hormuz Blockade",
+      "summary": "More than a dozen U.S. Navy warships are enforcing a blockade on all vessels from all nations entering or leaving coastal areas or ports in Iran.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T18:13:23+00:00",
+      "time": "18:13",
+      "url": "https://www.nytimes.com/2026/04/15/world/middleeast/iran-ships-strait-hormuz-blockade.html",
+      "normalized_title": "iranlinked ships slow or stop as us navy enforces strait of hormuz blockade"
+    },
+    {
+      "title": "That Meeting You Hate May Keep A.I. From Stealing Your Job",
+      "summary": "As artificial intelligence makes many tasks easier, the human work of cajoling, arm-twisting and reassuring appears to be rising in importance.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T21:01:25+00:00",
+      "time": "21:01",
+      "url": "https://www.nytimes.com/2026/04/15/business/ai-jobs-human-work.html",
+      "normalized_title": "that meeting you hate may keep ai from stealing your job"
+    },
+    {
+      "title": "Amid Iran War, Companies Look to Extend a Record Profit Run by Raising Prices",
+      "summary": "Higher inflation is leading companies to raise prices without sacrificing margins.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T17:12:48+00:00",
+      "time": "17:12",
+      "url": "https://www.nytimes.com/2026/04/15/business/economy/companies-profits-prices-iran-war.html",
+      "normalized_title": "amid iran war companies look to extend a record profit run by raising prices"
+    },
+    {
+      "title": "Trump Threatens to Fire Powell if He Does Not Resign From Fed",
+      "summary": "Although Jerome H. Powell’s term as Fed chair officially ends on May 15, he can stay on as a governor until 2028 and said he would not leave until a criminal investigation was over.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T18:30:36+00:00",
+      "time": "18:30",
+      "url": "https://www.nytimes.com/2026/04/15/business/trump-powell-fed-fire.html",
+      "normalized_title": "trump threatens to fire powell if he does not resign from fed"
+    },
+    {
+      "title": "Trump Threatens to Fire Powell, Again",
+      "summary": "The new threat against the Fed chair comes ahead of a Senate confirmation hearing for Kevin Warsh, President Trump’s pick to lead the central bank.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T14:04:19+00:00",
+      "time": "14:04",
+      "url": "https://www.nytimes.com/2026/04/15/business/dealbook/trump-fire-powell-fed.html",
+      "normalized_title": "trump threatens to fire powell again"
+    },
+    {
+      "title": "Trump Increased Tax Refunds, but a Political Challenge Still Looms",
+      "summary": "While last year’s tax law has raised the average I.R.S. refund, the boost is less than the White House expected — and may not have much impact on voters.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T18:04:43+00:00",
+      "time": "18:04",
+      "url": "https://www.nytimes.com/2026/04/15/business/trump-tax-law-refunds-voters.html",
+      "normalized_title": "trump increased tax refunds but a political challenge still looms"
+    },
+    {
+      "title": "Japan Pledges $10 Billion to Help Countries Cope With Oil Prices",
+      "summary": "With supply chains at risk, the aid to Southeast Asian nations is aimed at securing the availability of oil-based products, including medical equipment.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T18:17:00+00:00",
+      "time": "18:17",
+      "url": "https://www.nytimes.com/2026/04/15/business/japan-aid-asia-oil.html",
+      "normalized_title": "japan pledges 10 billion to help countries cope with oil prices"
+    },
+    {
+      "title": "11 Electric Cars Worth a Look as Gas Prices Soar",
+      "summary": "The war in Iran has auto shoppers sizing up electrics. Many strong cars are on the market, and there are bargains to be had when buying used.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T18:28:35+00:00",
+      "time": "18:28",
+      "url": "https://www.nytimes.com/2026/04/15/business/electric-cars-evs-used-gas-prices.html",
+      "normalized_title": "11 electric cars worth a look as gas prices soar"
+    },
+    {
+      "title": "How Older Adults Are Using VR to Counter Social Isolation",
+      "summary": "New tools tailored for use in senior living communities allow for shared experiences and social bonding.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T09:00:11+00:00",
+      "time": "09:00",
+      "url": "https://www.nytimes.com/2026/04/15/technology/vr-technology-elderly-community-social-isolation.html",
+      "normalized_title": "how older adults are using vr to counter social isolation"
+    },
+    {
+      "title": "War Exposes Gaps in India’s Clean Energy Push",
+      "summary": "The country’s creaking electricity grid is lagging behind its push for renewable sources — just as its growing economy hungers for oil stranded by war.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T15:04:20+00:00",
+      "time": "15:04",
+      "url": "https://www.nytimes.com/2026/04/15/business/india-solar-energy-problems.html",
+      "normalized_title": "war exposes gaps in indias clean energy push"
+    },
+    {
+      "title": "Prosecutors Make Surprise Visit to Fed as Pirro Defends Investigation",
+      "summary": "The Justice Department’s criminal inquiry into the Federal Reserve threatens to delay the confirmation of the next chair.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T02:45:37+00:00",
+      "time": "02:45",
+      "url": "https://www.nytimes.com/2026/04/14/us/politics/pirro-federal-reserve-investigation.html",
+      "normalized_title": "prosecutors make surprise visit to fed as pirro defends investigation"
+    },
+    {
+      "title": "US Blockade Stops Iran-Linked Ships From Crossing Strait of Hormuz",
+      "summary": "U.S. Central Command said that six vessels had complied with directions to turn around and re-enter an Iranian port.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T01:42:29+00:00",
+      "time": "01:42",
+      "url": "https://www.nytimes.com/2026/04/14/business/strait-of-hormuz-blockade.html",
+      "normalized_title": "us blockade stops iranlinked ships from crossing strait of hormuz"
+    },
+    {
+      "title": "Kevin Warsh, Trump’s Pick for Fed Chair, Discloses Vast Wealth Ahead of Confirmation Hearing",
+      "summary": "Kevin M. Warsh vowed to divest a substantial amount of his more than $100 million in assets as he faces a complicated path to becoming the next chair of the Federal Reserve.",
+      "source": "NYTimes Business",
+      "feed_category": "商业",
+      "published_at": "2026-04-15",
+      "published_datetime": "2026-04-15T19:02:47+00:00",
+      "time": "19:02",
+      "url": "https://www.nytimes.com/2026/04/14/business/trump-federal-reserve-warsh.html",
+      "normalized_title": "kevin warsh trumps pick for fed chair discloses vast wealth ahead of confirmation hearing"
+    }
+  ]
+}

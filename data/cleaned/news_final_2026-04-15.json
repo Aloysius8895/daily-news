@@ -1,0 +1,266 @@
+{
+  "date": "2026-04-15",
+  "overview": "2026-04-15 共整理 20 条重要新闻，其中科技与 AI 相关内容 20 条。当前为未经过模型重写的本地兜底结果。",
+  "news": [
+    {
+      "category": "科技",
+      "title": "Like Anthropic, OpenAI Will Share Latest Technology Only With Trusted Companies",
+      "summary": "The maker of ChatGPT announced the limited release of GPT-5.4-Cyber, a technology designed to find security holes in software.",
+      "importance": "",
+      "source": "NYTimes Technology",
+      "date": "2026-04-15",
+      "time": "00:25",
+      "url": "https://www.nytimes.com/2026/04/14/technology/openai-cybersecurity-gpt54-cyber.html",
+      "raw_sources": [
+        "NYTimes Technology"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "How Older Adults Are Using VR to Counter Social Isolation",
+      "summary": "New tools tailored for use in senior living communities allow for shared experiences and social bonding.",
+      "importance": "",
+      "source": "NYTimes Technology",
+      "date": "2026-04-15",
+      "time": "09:00",
+      "url": "https://www.nytimes.com/2026/04/15/technology/vr-technology-elderly-community-social-isolation.html",
+      "raw_sources": [
+        "NYTimes Technology"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "Spice Up Your Cooking Skills With Help From Your Phone",
+      "summary": "Recipe apps and artificial intelligence can give you a boost, but free tools already on your device can also assist with meal planning and preparation.",
+      "importance": "",
+      "source": "NYTimes Technology",
+      "date": "2026-04-15",
+      "time": "09:04",
+      "url": "https://www.nytimes.com/2026/04/15/technology/personaltech/recipes-cooking-ai.html",
+      "raw_sources": [
+        "NYTimes Technology"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "The Deepfake Nudes Crisis in Schools Is Much Worse Than You Thought",
+      "summary": "An analysis by WIRED and Indicator found nearly 90 schools and 600 students around the world impacted by AI-generated deepfake nude images—and the problem shows no signs of going away.",
+      "importance": "",
+      "source": "WIRED AI",
+      "date": "2026-04-15",
+      "time": "10:00",
+      "url": "https://www.wired.com/story/deepfake-nudify-schools-global-crisis/",
+      "raw_sources": [
+        "WIRED AI"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "Google to punish sites that trap people in with back button tricks",
+      "summary": "The tech giant said it will punish sites that block back button navigation from June.",
+      "importance": "",
+      "source": "BBC Technology",
+      "date": "2026-04-15",
+      "time": "10:02",
+      "url": "https://www.bbc.com/news/articles/c05dd2yj3z3o?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC Technology"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "AI Slop Is Making the Internet Fake-Happy",
+      "summary": "A new study examines the impact of the rise of AI-generated websites on the internet—and found some surprising results.",
+      "importance": "",
+      "source": "WIRED AI",
+      "date": "2026-04-15",
+      "time": "11:00",
+      "url": "https://www.wired.com/story/ai-slop-is-changing-the-internet-just-not-how-you-might-think/",
+      "raw_sources": [
+        "WIRED AI"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "Booking.com customers warned of 'reservation hijacking' after hack",
+      "summary": "The travel platform said it had changed Pins to protect customers but would not say how many were affected.",
+      "importance": "",
+      "source": "BBC Technology",
+      "date": "2026-04-15",
+      "time": "12:05",
+      "url": "https://www.bbc.com/news/articles/cly00jnnxypo?at_medium=RSS&at_campaign=rss",
+      "raw_sources": [
+        "BBC Technology"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "Best Smart Smoke Detector (and Why You Still Need a Dumb One)",
+      "summary": "Every smart smoke alarm I’ve tested has one potentially fatal flaw, trading fewer nuisance alarms for a risky sensor strategy.",
+      "importance": "",
+      "source": "WIRED Top Stories",
+      "date": "2026-04-15",
+      "time": "13:18",
+      "url": "https://www.wired.com/story/should-smoke-alarms-be-smart/",
+      "raw_sources": [
+        "WIRED Top Stories"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "Allbirds Is Pivoting to AI Compute. Sure, Why Not",
+      "summary": "Once a $4 billion apparel juggernaut, Allbirds will rebrand as NewBird AI, a “GPU-as-a-Service” company. Hey, if you can't beat ’em, join ’em.",
+      "importance": "",
+      "source": "WIRED AI",
+      "date": "2026-04-15",
+      "time": "14:58",
+      "url": "https://www.wired.com/story/allbirds-is-pivoting-to-ai-compute-sure-why-not/",
+      "raw_sources": [
+        "WIRED AI"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "MAGA Is Starting to Look Beyond Trump",
+      "summary": "A seemingly endless torrent of criticism directed toward Trump from former MAGA allies suggests the president is losing support from his base.",
+      "importance": "",
+      "source": "WIRED Top Stories",
+      "date": "2026-04-15",
+      "time": "15:00",
+      "url": "https://www.wired.com/story/maga-is-starting-to-look-beyond-trump/",
+      "raw_sources": [
+        "WIRED Top Stories"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "We Don’t Really Know How A.I. Works. That’s a Problem.",
+      "summary": "For us to trust it on certain subjects, researchers in the growing field of interpretability might need to learn how to open the black box of its brain.",
+      "importance": "",
+      "source": "NYTimes Technology",
+      "date": "2026-04-15",
+      "time": "15:27",
+      "url": "https://www.nytimes.com/2026/04/15/magazine/ai-black-box-interpretability-research.html",
+      "raw_sources": [
+        "NYTimes Technology"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "The US Government Will Ask Data Centers How Much Power They Use",
+      "summary": "In a letter obtained by WIRED, the Energy Information Administration tells two senators that it plans to develop a mandatory assessment of data centers' energy use.",
+      "importance": "",
+      "source": "WIRED Top Stories",
+      "date": "2026-04-15",
+      "time": "16:00",
+      "url": "https://www.wired.com/story/the-us-government-to-ask-data-centers-how-much-power-they-use/",
+      "raw_sources": [
+        "WIRED Top Stories"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "Why Amazon Is Buying Globalstar—and What It Means for Your iPhone",
+      "summary": "Amazon is paying more than $11 billion for a small satellite company.",
+      "importance": "",
+      "source": "WIRED Top Stories",
+      "date": "2026-04-15",
+      "time": "16:19",
+      "url": "https://www.wired.com/story/why-amazon-is-buying-globalstar-and-what-it-means-for-your-iphone/",
+      "raw_sources": [
+        "WIRED Top Stories"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "Microsoft Surface PCs Are Getting Big Price Hikes, and the Cheaper Models Are Going Away",
+      "summary": "The price increases range from $200 to $300, and Microsoft doesn’t sell a sub-$1,000 Surface anymore. The rising cost of consumer tech is a common theme in 2026.",
+      "importance": "",
+      "source": "WIRED Top Stories",
+      "date": "2026-04-15",
+      "time": "17:28",
+      "url": "https://www.wired.com/story/microsoft-surface-price-hikes-cheaper-models-going-away/",
+      "raw_sources": [
+        "WIRED Top Stories"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "AI Could Democratize One of Tech's Most Valuable Resources",
+      "summary": "AI is making it easier to design chips and optimize software for different silicon. Some startups envision a revolution in chipmaking.",
+      "importance": "",
+      "source": "WIRED AI",
+      "date": "2026-04-15",
+      "time": "18:00",
+      "url": "https://www.wired.com/story/ai-could-democratize-one-of-techs-most-valuable-resources/",
+      "raw_sources": [
+        "WIRED AI"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "Ad Companies Settle With F.T.C. Over Claims of Harm to Conservative Sites",
+      "summary": "WPP, Dentsu and Publicis settled claims they colluded on policies to combat misinformation, denying ad revenue to publishers on the right.",
+      "importance": "",
+      "source": "NYTimes Technology",
+      "date": "2026-04-15",
+      "time": "18:08",
+      "url": "https://www.nytimes.com/2026/04/15/technology/ftc-ad-companies-settlement.html",
+      "raw_sources": [
+        "NYTimes Technology"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "Snap Is Laying Off 16% of Full-Time Staff as It Embraces A.I.",
+      "summary": "The company, which owns the social media app Snapchat, said it was laying off about 1,000 employees as it increased its reliance on artificial intelligence.",
+      "importance": "",
+      "source": "NYTimes Technology",
+      "date": "2026-04-15",
+      "time": "18:21",
+      "url": "https://www.nytimes.com/2026/04/15/business/snap-layoffs-snapchat.html",
+      "raw_sources": [
+        "NYTimes Technology"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "NASA Wants to Put Nuclear Reactors on the Moon",
+      "summary": "The White House has announced that NASA will work with the Departments of Defense and Energy to put nuclear reactors in orbit and on the surface of the moon.",
+      "importance": "",
+      "source": "WIRED Top Stories",
+      "date": "2026-04-15",
+      "time": "18:55",
+      "url": "https://www.wired.com/story/nasa-wants-to-put-nuclear-reactors-on-the-moon/",
+      "raw_sources": [
+        "WIRED Top Stories"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "That Meeting You Hate May Keep A.I. From Stealing Your Job",
+      "summary": "As artificial intelligence makes many tasks easier, the human work of cajoling, arm-twisting and reassuring appears to be rising in importance.",
+      "importance": "",
+      "source": "NYTimes Technology",
+      "date": "2026-04-15",
+      "time": "21:01",
+      "url": "https://www.nytimes.com/2026/04/15/business/ai-jobs-human-work.html",
+      "raw_sources": [
+        "NYTimes Technology"
+      ]
+    },
+    {
+      "category": "科技",
+      "title": "Ford Says Doug Field, Who Led Company's E.V. Push, is Leaving",
+      "summary": "Doug Field, a former Tesla and Apple executive, had returned to Ford Motor in 2021 to help develop new electric models and software.",
+      "importance": "",
+      "source": "NYTimes Technology",
+      "date": "2026-04-15",
+      "time": "21:22",
+      "url": "https://www.nytimes.com/2026/04/15/business/ford-electric-vehicles-doug-field.html",
+      "raw_sources": [
+        "NYTimes Technology"
+      ]
+    }
+  ]
+}
